@@ -1,0 +1,725 @@
+---
+Golden Troupe:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: skill dmg%
+      value: 0.2
+  4pc:
+    - type: buff
+      buff:
+        target: self
+        stat: skill dmg%
+        value: 0.25
+    - type: bool buff
+      text: Additionally, when not on the field, Elemental Skill DMG will be further increased by 25%. This effect will be cleared 2s after taking the field.
+      buff:
+        target: self
+        stat: skill dmg%
+        value: 0.25
+
+Marechausse Hunter:
+  2pc:
+    - type: buff
+      buff:
+        target: self
+        stat: na dmg%
+        value : 0.15
+    - type: buff
+      buff:
+        target: self
+        stat: ca dmg%
+        value : 0.15
+  4pc:
+    type: stack buff
+    text: When current HP increases or decreases, CRIT Rate will be increased by 12% for 5s. Max 3 stacks.
+    maxstack: 3
+    buff:
+      target: self
+      stat: cr%
+      value: 0.12
+
+Vourukasha's Glow:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: hp%
+      value: 0.2
+  4pc:
+    - type: buff
+      buff:
+      - target: self
+        stat: skill dmg%
+        value: 0.1
+      - target: self
+        stat: burst dmg%
+        value: 0.1
+    - type: stack buff
+      text: After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.
+      maxstack: 5
+      buff:
+        - target: self
+          stat: skill dmg%
+          value: 0.08
+        - target: self
+          stat: burst dmg%
+          value: 0.08
+
+Nymph's Dream:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: hydro dmg%
+      value: 0.15
+  4pc:
+    type: stack-precise buff
+    text: After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.
+    maxstack: 3
+    stacks:
+      1:
+        - target: self
+          stat: atk%
+          value: 0.07
+        - target: self
+          stat: hydro dmg%
+          value: 0.04
+      2:
+        - target: self
+          stat: atk%
+          value: 0.16
+        - target: self
+          stat: hydro dmg%
+          value: 0.09
+      3:
+        - target: self
+          stat: atk%
+          value: 0.25
+        - target: self
+          stat: hydro dmg%
+          value: 0.15
+
+Desert Pavilion Chronicle:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: anemo dmg%
+      value: 0.15
+  4pc:
+    type: bool buff
+    text: When Charged Attacks hit opponents, the equipping character's Normal Attack SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s.
+    buff:
+      - target: self
+        stat: na spd%
+        value: 0.1
+      - target: self
+        stat: na dmg%
+        value: 0.4
+      - target: self
+        stat: ca dmg%
+        value: 0.4
+      - target: self
+        stat: pa dmg%
+        value: 0.4
+
+Flower of Paradise Lost:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: em
+      value: 80
+  4pc:
+    - type: buff
+      buff:
+        - target: self
+          stat: bloom dmg%
+          value: 0.4
+        - target: self
+          stat: hyperbloom dmg%
+          value: 0.4
+        - target: self
+          stat: burgeon dmg%
+          value: 0.4
+    - type: stack buff
+      maxstack: 4
+      buff:
+        - target: self
+          stat: bloom dmg%
+          value: 0.1
+        - target: self
+          stat: hyperbloom dmg%
+          value: 0.1
+        - target: self
+          stat: burgeon dmg%
+          value: 0.1
+
+Gilded Dreams:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: em
+      value: 80
+  4pc:
+    - type: stack buff
+      text: Within 8s of triggering an Elemental Reaction, ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character.
+      maxstack: 3
+      buff:
+        - target: self
+          stat: atk%
+          value: 0.14
+    - type: stack buff
+      text: Within 8s of triggering an Elemental Reaction, Elemental Mastery is increased by 50 for every party member with a different Elemental Type.
+      maxstack: 3
+      buff:
+        - target: self
+          stat: EM
+          value: 50
+
+Deepwood Memories:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: dendro dmg%
+      value: 0.15
+  4pc:
+    type: bool buff
+    text: After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field.
+    buff:
+      target: enemy
+      stat: dendro res%
+      value: -0.3
+
+Retracing Bolide:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: shield%
+      value: 0.35
+  4pc:
+    type: bool buff
+    text: While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.
+    buff:
+      - target: self
+        stat: na dmg%
+        value: 0.4
+      - target: self
+        stat: ca dmg%
+        value: 0.4
+
+Shimenawa's Reminiscence:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: atk%
+      value: 0.18
+  4pc:
+    type: bool buff
+    text: When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration.
+    buff:
+      - target: self
+        stat: na dmg%
+        value: 0.5
+      - target: self
+        stat: ca dmg%
+        value: 0.5
+      - target: self
+        stat: pa dmg%
+        value: 0.5
+
+Vermillion Hereafter:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: atk%
+      value: 0.18
+  4pc:
+    - type: bool buff
+      text: After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s.
+      buff:
+        target: self
+        stat: atk%
+        value: 0.08
+    - type: stack buff
+      text: When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled.
+      maxstack: 4
+      buff:
+        target: self
+        stat: atk%
+        value: 0.1
+
+Gambler:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: skill dmg%
+      value: 0.2
+  4pc:
+    type: none
+
+Gladiator's Finale:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: atk%
+        value: 0.18
+  4pc:
+    type: bool buff
+    text: If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.
+    buff:
+        target: self
+        stat: na dmg%
+        value: 0.35
+
+Maiden Beloved:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: heal out%
+      value: 0.15
+  4pc:
+    type: bool buff
+    text: Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.
+    buff:
+      target: team
+      stat: heal in%
+      value: 0.2
+
+Resolution of Sojourner:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: atk%
+        value: 0.18
+  4pc:
+    type: buff
+    buff:
+        target: self
+        stat: ca cr%
+        value: 0.3
+
+Pale Flame:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: phys dmg%
+        value: 0.25
+  4pc:
+    type: stack-precise buff
+    text: When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.
+    maxstack: 2
+    stacks:
+      1:
+        target: self
+        stat: atk%
+        value: 0.09
+      2:
+        - target: self
+          stat: atk%
+          value: 0.18
+        - target: self
+          stat: phys dmg%
+          value: 0.25
+
+Viridescent Venerer:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: anemo dmg%
+        value: 0.15
+  4pc:
+    - type: buff
+      buff:
+      target: self
+      stat: swirl dmg%
+      value: 0.6
+    - type: elem bool buff
+      text: Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s.
+      elems:
+        hydro:
+          target: enemy
+          stat: hydro res%
+          value: -0.4
+        pyro:
+          target: enemy
+          stat: pyro res%
+          value: -0.4
+        cryo:
+          target: enemy
+          stat: cryo res%
+          value: -0.4
+        electro:
+          target: enemy
+          stat: electro res%
+          value: -0.4
+
+Emblem of Severed Fate:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: er%
+        value: 0.2
+  4pc:
+    type: ratio
+    text: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.
+    source:
+      target: self
+      stat: er%
+    buff:
+      target: self
+      stat: burst dmg%
+      value: 0.25
+      maxvalue: 0.75
+
+Crimson Witch of Flames:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: pyro dmg%
+        value: 0.15
+  4pc:
+    - type: buff
+      buff:
+        - target: self
+          stat: overloaded dmg%
+          value: 0.4
+        - target: self
+          stat: burning dmg%
+          value: 0.4
+        - target: self
+          stat: vaporize dmg%
+          value: 0.15
+        - target: self
+          stat: melt dmg%
+          value: 0.15
+    - type: stack buff
+      text: Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks.
+      maxstack: 3
+      buff:
+        target: self
+        stat: pyro dmg%
+        value: 0.075
+
+Traveling Doctor:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: heal in%
+      value: 0.2
+  4pc:
+    type: none
+
+Lavawalker:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: pyro res%
+      value: 0.4
+  4pc:
+    type: bool buff
+    text: Increases DMG against opponents affected by Pyro by 35%.
+    buff:
+      target: self
+      stat: dmg%
+      value: 0.35
+
+Ocean-Hued Clam:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: heal out%
+      value: 0.15
+  4pc:
+    type: none
+
+Wanderer's Troupe:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: em
+      value: 80
+  4pc:
+    type: bool buff
+    text: Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow.
+    buff:
+      target: self
+      stat: ca dmg%
+      value: 0.35
+
+The Exile:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: er%
+      value: 0.2
+  4pc:
+    type: none
+
+
+Heart of Depth:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: hydro dmg%
+      value: 0.15
+  4pc:
+    type: bool buff
+    text: After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.
+    buff:
+      - target: self
+        stat: na dmg%
+        value: 0.3
+      - target: self
+        stat: ca dmg%
+        value: 0.3
+
+Martial Artist:
+  2pc:
+    type: buff
+    buff:
+      - target: self
+        stat: na dmg%
+        value: 0.15
+      - target: self
+        stat: ca dmg%
+        value: 0.15
+  4pc:
+    type: bool buff
+    text: After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s.
+    buff:
+      - target: self
+        stat: na dmg%
+        value: 0.25
+      - target: self
+        stat: ca dmg%
+        value: 0.25
+
+Bloodstained Chivalry:
+  2pc:
+    type: buff
+    buff:
+        target: self
+        stat: phys dmg%
+        value: 0.25
+  4pc:
+    type: bool buff
+    text: After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s.
+    buff:
+      target: self
+      stat: ca dmg%
+      value: 0.5
+
+Echoes of an Offering:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: atk%
+      value: 0.18
+  4pc:
+    type: bool ratio
+    text: When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s.
+    source:
+      target: self
+      stat: atk
+    buff:
+      target: self
+      stat: na dmg
+      value: 0.7
+
+Noblesse Oblige:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: burst dmg%
+      value: 0.2
+  4pc:
+    type: bool buff
+    text: Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.
+    buff:
+      target: team
+      stat: atk%
+      value: 0.2
+
+Instructor:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: em
+      value: 80
+  4pc:
+    type: bool buff
+    text: Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s.
+    buff:
+      target: team
+      stat: em
+      value: 120
+
+Berserker:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: cr%
+      value: 0.12
+  4pc:
+    type: bool buff
+    text: When HP is below 70%, CRIT Rate increases by an additional 24%.
+    buff:
+      target: self
+      stat: cr%
+      value: 0.24
+
+Archaic Petra:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: geo dmg%
+      value: 0.15
+  4pc:
+    type: elem bool buff
+    text: Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.
+    elems:
+      hydro:
+        target: team
+        stat: hydro dmg%
+        value: 0.35
+      pyro:
+        target: team
+        stat: pyro dmg%
+        value: 0.35
+      cryo:
+        target: team
+        stat: cryo dmg%
+        value: 0.35
+      electro:
+        target: team
+        stat: electro dmg%
+        value: 0.35
+
+Lucky Dog:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: def
+      value: 100
+
+Thundersoother:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: electro res%
+      value: 0.4
+  4pc:
+    type: bool buff
+    text: Increases DMG against opponents affected by Electro by 35%.
+    buff:
+      target: self
+      stat: dmg%
+      value: 0.35
+
+Thundering Fury:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: electro dmg%
+      value: 0.15
+  4pc:
+    type: buff
+    text: Increases damage caused by Overloaded, Electro-Charged and Superconduct by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.
+    buff:
+      - target: self
+        stat: overloaded dmg%
+        value: 0.4
+      - target: self
+        stat: electrocharged dmg%
+        value: 0.4
+      - target: self
+        stat: superconduct dmg%
+        value: 0.4
+
+Husk of Opulent Dreams:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: def%
+      value: 0.3
+  4pc:
+    type: stack buff
+    text: 'A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost.'
+    maxstack: 4
+    buff:
+      - target: self
+        stat: def%
+        value: 0.06
+      - target: self
+        stat: geo dmg%
+        value: 0.06
+
+Tenacity of the Millelith:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: hp%
+      value: 0.2
+  4pc:
+    type: bool buff
+    text: When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s
+    buff:
+      - target: team
+        stat: atk%
+        value: 0.2
+      - target: team
+        stat: shield%
+        value: 0.3
+
+Blizzard Strayer:
+  2pc:
+    type: buff
+    buff:
+      target: self
+      stat: cryo dmg%
+      value: 0.15
+  4pc:
+    - type: bool buff
+      text: When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%.
+      buff:
+        target: self
+        stat: cr%
+        value: 0.2
+    - type: bool buff
+      text: If the opponent is Frozen, CRIT Rate is increased by an additional 20%.
+      buff:
+        target: self
+        stat: cr%
+        value: 0.2
