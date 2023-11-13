@@ -145,7 +145,7 @@ Flower of Paradise Lost:
           stat: burgeon dmg%
           value: 0.4
     - type: stack buff
-    text: After the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously.
+      text: After the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously.
       maxstack: 4
       buff:
         - target: self
