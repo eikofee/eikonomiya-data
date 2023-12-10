@@ -46,7 +46,7 @@ Field name | Available values | Description
 `name` | String | (Optional) Name of the effect. Should be defaulted to parent object's name if not given.
 `text` | String | Description of how the effect/passive works.
 `maxstack` | Int | (Optional) Maximum number of stack allowed when `stack buff` or `precise-stack buff` is used in `type`.
-`buff` | Buff Object | Buff provided by the effect/passive. Can be an array.
+`buff` | Buff Object[] | Buff provided by the effect/passive.
 `elems`| Buff Objects | (Optional) Buff provided depending on the element involved when `elem bool buff` is used in `type`. Use field names `pyro`, `hydro`, `cryo`, `electro`, `geo`, `dendro` to list the buffs. Can **not** be an array.
 `stacks` | Buff Objects | (Optional) Buff provided depending on the number of stacks when `precise-stack buff` is used in `type`. Use integers to list effects. Can **not** be an array.
 
@@ -60,8 +60,8 @@ If the effect is not important for the computation, use `none`.
 ### Artefact
 Field name | Available values | Description
 ---|---|---
-`2pc` | Effect Object | The passive given when wearing 2 pieces of the artefact set. Can be an array.
-`4pc` | Effect Object | The passive given when wearing 4 pieces of the artefact set. Can be an array.
+`2pc` | Effect Object[] | The passive given when wearing 2 pieces of the artefact set.
+`4pc` | Effect Object[] | The passive given when wearing 4 pieces of the artefact set.
 
 ### Weapon
 
@@ -71,7 +71,7 @@ Maybe give only the secondary attribute name but not the value to compute that v
 Field name | Available values | Description
 ---|---|---
 `attribute` | Stat Symbol | The secondary attribute of the weapon. Does **not** include supplementary effect in the weapon passive.
-`passive` | Effect Object | Description of the passive. Remember to use arrays in the `value` field of Buff Objects for each refinement level. Can be an array.
+`passive` | Effect Object[] | Description of the passive. Remember to use arrays in the `value` field of Buff Objects for each refinement level.
 
 ## DMG Formula reminder
 ```
