@@ -1,0 +1,16 @@
+---
+hp%: 0.06
+atk%: 0.06
+def%: 0.075
+em: 24
+er%: 0.067
+cr%: 0.04
+cdmg%: 0.08
+anemo dmg%: 0.06
+geo dmg%: 0.06
+electro dmg%: 0.06
+dendro dmg%: 0.06
+hydro dmg%: 0.06
+pyro dmg%: 0.06
+cryo dmg%: 0.06
+phys dmg%: 0.075

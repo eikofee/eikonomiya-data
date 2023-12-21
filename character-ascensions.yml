@@ -1,0 +1,153 @@
+---
+Lumine:
+  stat: atk%
+Aether:
+  stat: atk%
+Lyney:
+  stat: cr%
+Hu Tao:
+  stat: cdmg%
+Diluc:
+  stat: cr%
+Klee:
+  stat: pyro dmg%
+Dehya:
+  stat: hp%
+Yoimiya:
+  stat: cr%
+Kamisato Ayato:
+  stat: cdmg%
+Sangonomiya Kokomi:
+  stat: hydro dmg%
+Mona:
+  stat: er%
+Nilou:
+  stat: hp%
+Yelan:
+  stat: cr%
+Tartaglia:
+  stat: hydro dmg%
+Furina:
+  stat: cr%
+Neuvillette:
+  stat: cdmg%
+Albedo:
+  stat: geo dmg%
+Arataki Itto:
+  stat: cr%
+Zhongli:
+  stat: geo dmg%
+Yae Miko:
+  stat: cr%
+Raiden Shogun:
+  stat: er%
+Keqing:
+  stat: cdmg%
+Cyno:
+  stat: cdmg%
+Tighnari:
+  stat: dendro dmg%
+Baizhu:
+  stat: hp%
+Alhaitham:
+  stat: dendro dmg%
+Nahida:
+  stat: em
+Eula:
+  stat: cdmg%
+Aloy:
+  stat: cryo dmg%
+Kamisato Ayaka:
+  stat: cdmg%
+Qiqi:
+  stat: heal out%
+Wriothesley:
+  stat: cdmg%
+Shenhe:
+  stat: atk%
+Ganyu:
+  stat: cdmg%
+Wanderer:
+  stat: cr%
+Jean:
+  stat: heal out%
+Venti:
+  stat: er%
+Xiao:
+  stat: cr%
+Kaedehara Kazuha:
+  stat: em
+Yanfei:
+  stat: pyro dmg%
+Thoma:
+  stat: atk%
+Amber:
+  stat: atk%
+Bennett:
+  stat: er%
+Xiangling:
+  stat: em
+Xinyan:
+  stat: atk%
+Candace:
+  stat: hp%
+Barbara:
+  stat: hp%
+Xingqiu:
+  stat: atk%
+Noelle:
+  stat: def%
+Ningguang:
+  stat: geo dmg%
+Gorou:
+  stat: geo dmg%
+Yun Jin:
+  stat: er%
+Dori:
+  stat: hp%
+Lisa:
+  stat: em
+Razor:
+  stat: phys dmg%
+Fischl:
+  stat: atk%
+Beidou:
+  stat: electro dmg%
+Kujou Sara:
+  stat: atk%
+Kuki Shinobu:
+  stat: hp%
+Collei:
+  stat: atk%
+Kirara:
+  stat: hp%
+Kaveh:
+  stat: em
+Yaoyao:
+  stat: hp%
+Rosaria:
+  stat: atk%
+Kaeya:
+  stat: er%
+Layla:
+  stat: hp%
+Chongyun:
+  stat: atk%
+Mika:
+  stat: hp%
+Freminet:
+  stat: atk%
+Charlotte:
+  stat: atk%
+Diona:
+  stat: cryo dmg%
+Lynette:
+  stat: anemo dmg%
+Shikanoin Heizou:
+  stat: anemo dmg%
+Sucrose:
+  stat: anemo dmg%
+Sayu:
+  stat: em
+Faruzan:
+  stat: atk%
