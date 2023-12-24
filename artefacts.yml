@@ -19,7 +19,7 @@ Golden Troupe:
           stat: skill dmg%
           value: 0.25
 
-Marechausse Hunter:
+Marechaussee Hunter:
   2pc:
     - type: buff
       buff:
