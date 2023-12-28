@@ -1,28 +1,48 @@
 ---
+Thundering Pulse:
+  - name: Rule By Thunder
+    type: buff
+    buff:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Thunder Emblem
+    type: stack-precise buff
+    maxstack: 3
+    buff:
+      1:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.12
+          maxvalue: 0.24
+      2:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.24
+          maxvalue: 0.48
+      3:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.4
+          maxvalue: 0.8
+
 Splendor of Tranquil Waters:
-  attribute: cdmg%
-  passive:
-    - type: stack buff
-      text: When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by 8%/10%/12%/14%/16% for 6s. Max 3 stacks. This effect can be triggered once every 0.2s.
-      maxstack: 3
-      buff:
-        target: self
+  - name: Dawn and Dusk by the Lake
+    type: stack buff
+    text: When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by 8%/10%/12%/14%/16% for 6s. Max 3 stacks. This effect can be triggered once every 0.2s.
+    maxstack: 3
+    buff:
+      - target: self
         stat: skill dmg%
-        value:
-          - 0.08
-          - 0.1
-          - 0.12
-          - 0.14
-          - 0.16
-    - type: stack buff
-      text: When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by 14%/17.5%/21%/24.5%/28% for 6s. Max 2 stacks. The aforementioned effects can be triggered even if the wielder is off-field.
-      maxstack: 2
-      buff:
-        target: self
+        minvalue: 0.08
+        maxvalue: 0.16
+  - name: Dawn and Dusk by the Lake
+    type: stack buff
+    text: When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by 14%/17.5%/21%/24.5%/28% for 6s. Max 2 stacks. The aforementioned effects can be triggered even if the wielder is off-field.
+    maxstack: 2
+    buff:
+      - target: self
         stat: hp%
-        value:
-          - 0.14
-          - 0.175
-          - 0.21
-          - 0.245
-          - 0.28
+        minvalue: 0.14
+        maxvalue: 0.28
