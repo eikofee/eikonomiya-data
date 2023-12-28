@@ -26,8 +26,6 @@ Marechaussee Hunter:
         - target: self
           stat: na dmg%
           value : 0.15
-    - type: buff
-      buff:
         - target: self
           stat: ca dmg%
           value : 0.15
