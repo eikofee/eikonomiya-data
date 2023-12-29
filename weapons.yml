@@ -113,22 +113,22 @@ Calamity Queller:
         minvalue: 0.12
         maxvalue: 0.24
   - name: Consummation (on-field)
-      type: stack
-      text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
-      maxstack: 6
-      effects:
-        - target: self
-          stat: atk%
-          minvalue: 0.032
-          maxvalue: 0.064
+    type: stack
+    text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
+    maxstack: 6
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.032
+        maxvalue: 0.064
   - name: Consummation (off-field)
-      type: stack
-      text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
-      maxstack: 6
-      effects:
-        - target: self
-          stat: atk%
-          minvalue: 0.064
+    type: stack
+    text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
+    maxstack: 6
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.064
         maxvalue: 0.0128
 
 Cashflow Supervision:
@@ -306,7 +306,7 @@ Jadefall's Splendor:
     effects:
       - target: self
         stat: char.elem dmg%
-        source: hp-flat
+        source: hp
         step: 1000
         minratio: 0.003
         maxratio: 0.011
@@ -967,3 +967,526 @@ Wolf's Gravestone:
           stat: atk%
           minvalue: 0.4
           maxvalue: 0.8
+
+\"The Catch\":
+  - name: Shanty
+    type: static
+    effects:
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: burst cr%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+\"Ultimate Overlord's Mega Magic Sword\":
+  - name: Melussistance! (1)
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Melussistance! (2)
+    type: stack
+    maxstack: 12
+    text: "Gain 1 stack for each Melusine helped."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.01
+        maxvalue: 0.02
+
+Akuoumaru:
+  - name: Watatsumi Wavewalker
+    type: stack
+    maxstack: 333
+    text: "Gain 1 stack for every point of Energy capacity in the party. (333 max, up to 0.08% incorrect value)"
+    effects:
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.0012
+        maxvalue: 0.0024
+
+Alley Hunter:
+  - name: Oppidan Ambush
+    type: stack
+    maxstack: 10
+    text: "Gain 1 stack per second off-field."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.02
+        maxvalue: 0.04
+
+Amenoma Kageuchi:
+  - name: Iwakura Succession
+    type: none
+
+Ballad of the Boundless Blue:
+  - name: Azure Skies
+    type: stack
+    maxstack: 3
+    text: "Character hits an opponent with NA or CA (6s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+Ballad of the Fjords:
+  - name: Tales of the Tundra
+    type: bool
+    text: "Party has at least 3 different elements."
+    effects:
+      - target: semf
+        stat: em
+        minvalue: 120
+        maxvalue: 240
+
+Blackcliff Agate:
+  - name: Press the Advantage
+    type: stack
+    maxstack: 3
+    text: "Gain 1 stack per defeated opponent (30s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Blackcliff Longsword:
+  - name: Press the Advantage
+    type: stack
+    maxstack: 3
+    text: "Gain 1 stack per defeated opponent (30s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Blackcliff Slasher:
+  - name: Press the Advantage
+    type: stack
+    maxstack: 3
+    text: "Gain 1 stack per defeated opponent (30s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Blackcliff Warbow:
+  - name: Press the Advantage
+    type: stack
+    maxstack: 3
+    text: "Gain 1 stack per defeated opponent (30s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Cinnabar Spindle:
+  - name: Spotless Heart
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg
+        source: def
+        minratio: 0.4
+        maxratio: 0.8
+
+Compound Bow:
+  - name: Infusion Arrow
+    type: stack
+    maxstack: 4
+    text: "NA or CA hit an opponent (6s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+      - target: self
+        stat: na spd%
+        minvalue: 0.012
+        maxvalue: 0.024
+
+Crescent Pike:
+  - name: Infusion Needle
+    type: bool
+    text: "Pick up Elemental Orb/Particle (5s)."
+    effects:
+      - target: self
+        stat: na dmg
+        source: atk
+        minratio: 0.2
+        maxratio: 0.4
+      - target: self
+        stat: ca dmg
+        source: atk
+        minratio: 0.2
+        maxratio: 0.4
+
+Deathmatch:
+  - name: Gladiator (1)
+    type: bool
+    text: "At least 2 opponents nearby."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: def%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Gladiator (2)
+    type: bool
+    text: "Fewer than 2 opponents nearby."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Dodoco Tales:
+  - name: Dodoventure! (1)
+    type: bool
+    text: "Hit opponents with NA (6s)."
+    effects:
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Dodoventure! (2)
+    type: bool
+    text: "Hit opponents with CA (6s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Dragon's Bane:
+  - name: Bane of Flame and Water
+    type: bool
+    text: "Opponent is affected by Hydro or Pyro."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.2
+        maxvalue: 0.36
+
+Dragonspine Spear:
+  - name: Frost Burial
+    type: info
+    effects:
+      - text: "Everfrost Icicle (no Cryo). CD: 10s."
+        source: atk
+        minratio: 0.8
+        maxratio: 1.4
+      - text: "Everfrost Icicle (Cryo). CD: 10s."
+        source: atk
+        minratio: 2
+        maxratio: 3.6
+
+End of the Line:
+  - name: Net Snapper
+    type: info
+    effects:
+      - text: "Flowrider DMG (x3). CD: 12s."
+        source: atk
+        minratio: 0.8
+        maxratio: 1.6
+
+Eye of Perception:
+  - name: Echo
+    type: info
+    effects:
+      - text: "Bolt of Perception (x1~4). CD: 12~8s."
+        source: atk
+        minratio: 2.4
+        maxratio: 3.6
+
+Fading Twilight:
+  - name: Radiance of the Deeps (Evengleam)
+    type: bool
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.06
+        maxvalue: 0.28
+  - name: Radiance of the Deeps (Afterglow)
+    type: bool
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.1
+        maxvalue: 0.2
+  - name: Radiance of the Deeps (Dawnblaze)
+    type: bool
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.14
+        maxvalue: 0.28
+
+Favonius Codex:
+  - name: Windfall
+    type: none
+
+Favonius Greatsword:
+  - name: Windfall
+    type: none
+
+Favonius Lance:
+  - name: Windfall
+    type: none
+
+
+Favonius Sword:
+  - name: Windfall
+    type: none
+
+
+Favonius Warbow:
+  - name: Windfall
+    type: none
+
+Festering Desire:
+  - name: Undying Admiration
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: skill cr%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+Finale of the Deep:
+  - name: An End Sublime
+    type: bool
+    text: "Elemental Skill is used (15s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Bond of Life
+    type: bool
+    text: "Bond of Life is cleared (15s) (25% of max hp considered)."
+    effects:
+      - target: self
+        source: hp
+        stat: atk
+        minratio: 0.006
+        maxratio: 0.008
+        minmaxvalue: 150
+        maxmaxvalue: 300
+
+Fleuve Cendre Ferryman:
+  - name: Ironbone (1)
+    type: static
+    effects:
+      - target: self
+        stat: skill cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+  - name: Ironbone (2)
+    type: bool
+    text: "Elemental Skill is used (5s)."
+    effects:
+      - target: self
+        stat: er%
+        minvalue: 0.16
+        maxvalue: 0.32
+
+Flowing Purity:
+  - name: Unfinished Masterpiece
+    type: bool
+    text: "Elemental Skill is used (15s)."
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+  - name: Bond of Life
+    type: ratio
+    text: "Bond of Life cleared (15s) (24% max hp considered)."
+    effects:
+      - target: self
+        stat: elem dmg%
+        source: hp
+        sourcefactor: 0.24
+        step: 1000
+        minratio: 0.02
+        maxratio: 0.04
+        minmaxvalue: 0.12
+        maxmaxvalue: 0.24
+
+Forest Regalia:
+  - name: Leaf of Consciousnesss
+    type: bool
+    text: "Can be picked-up (12s). Created when triggering Dendro-related reaction (10s)."
+    effects:
+      - target: team
+        stat: em
+        minvalue: 60
+        maxvalue: 120
+
+Frostbreare:
+  - name: Frost Burial
+    type: info
+    effects:
+      - text: "Everfrost Icicle (no Cryo). CD: 10s."
+        source: atk
+        minratio: 0.8
+        maxratio: 1.4
+      - text: "Everfrost Icicle (Cryo). CD: 10s."
+        source: atk
+        minratio: 2
+        maxratio: 3.6
+
+Fruit of Fulfillment:
+  - name: Full Circle
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack everytime an elemental reaction is triggered (6s)."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 24
+        maxvalue: 36
+      - target: self
+        stat: atk%
+        value: -0.05
+
+Hakushin Ring:
+  - name: Sakura Saiguu
+    type: bool
+    text: "Character triggers Electro elemental reaction (6s)."
+    effects:
+      - target: team
+        stat: elem dmg%
+        minvalue: 0.1
+        maxvalue: 0.2
+
+Hamayumi:
+  - name: Full Draw (Energy < 100%)
+    type: bool
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Full Draw (Energy at 100%)
+    type: bool
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.32
+        maxvalue: 0.64
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Ibis Piercer:
+  - name: Secret Wisdom's Favor
+    type: stack
+    maxstack: 2
+    text: "Gain 1 stack when hitting opponent with CA (6s)."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 40
+        maxvalue: 80
+
+Iron Sting:
+  - name: Infusion Stinger
+    type: stack
+    maxstack: 2
+    text: "Gain 1 stack when dealing elemental damages (6s)."
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+Kagotsurube Isshin:
+  - name: Isshin Art Clarity
+    type: bool
+    text: "Hitting opponent with NA, CA or PA (8s). CD: 8s"
+    effects:
+      - target: self
+        stat: atk%
+        value: 0.15
+  - name: Hewing Gale
+    type: info
+    effects:
+      - info: "Hewing Gale DMG"
+        source: atk
+        ratio: 1.8
+
+Katsuragikiri Nagamasa:
+  - name: Samurai Conduct
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+King's Squire:
+  - name: Labyrinth Lord's Instruction
+    type: bool
+    text: "Elemental Skill or Burst is used (12s). CD: 20s."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 60
+        maxvalue: 140
+  - name: Teaching of the Forest end
+    type: info
+    effects:
+      - info: "Teaching of the Forest DMG"
+        source: atk
+        minratio: 1
+        maxratio: 1.8
+
+Kitain Cross Spear:
+  - name: Samurai Conduct
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+Lion's Roar:
+  - name: Bane of Fire and Thunder
+    type: bool
+    text: "Opponent is affected by Pyro or Electro."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.2
+        maxvalue: 0.36
+
+# Lithic Blade:
+#   - name: "Lithic Axiom: Unity"
