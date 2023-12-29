@@ -1,6 +1,30 @@
 ---
 A Thousand Floating Dreams:
-  - type: wip
+  - name: A Thousand Nights' Dawnson (1)
+    type: stack
+    maxstack: 3
+    text: "Characters in the party with the same element as weilder."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 32
+        maxvalue: 64
+  - name: A Thousand Nights' Dawnson (2)
+    type: stack
+    maxstack: 3
+    text: "Characters in the party with an element different from the weilder."
+    effects:
+      - target: self
+        stat: char.elem dmg%
+        minvalue: 0.1
+        maxvalue: 0.26
+  - name: A Thousand Nights' Dawnson (3)
+    type: static
+    effects:
+      - target: team-exclusive
+        stat: em
+        minvalue: 40
+        maxvalue: 48
 
 Amos' Bow:
   - name: Strong-Willed (1)
@@ -611,6 +635,212 @@ Skyward Blade:
         minratio: 0.2
         maxratio: 0.4
 
+Skyward Harp:
+  - name: Echoing Ballad
+    type: static
+    effects:
+      - target: self
+        stat: cdmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Skyward Pride:
+  - name: Sky-ripping Dragon Spine
+    type: static
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Skyward Spine:
+  - name: Black Wing
+    type: static
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+      - target: self
+        stat: na spd%
+        value: 0.12
+
+Song of Broken Spines:
+  - name: Rebel's Banner-Hymn
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: "Millennial Movement: Banner-Hymn"
+    type: bool
+    text: "Character hits 4 times an opponent using NA or CA. Lasts for 12s. CD: 20s"
+    effects:
+      - target: self
+        stat: na spd%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Splendor of Tranquil Waters:
+  - name: Dawn and Dusk by the Lake (1)
+    type: stack
+    text: "Characters'HP increases or decreases."
+    maxstack: 3
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+  - name: Dawn and Dusk by the Lake (2)
+    type: stack
+    text: Other characters' current HP increases or decreases.
+    maxstack: 2
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.14
+        maxvalue: 0.28
+
+Staff of Homa:
+  - name: Reckless Cinnabar (1)
+    type: static
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Reckless Cinnabar (2, HP > 50%)
+    type: bool
+    effects:
+      - target: self
+        source: hp
+        stat: atk
+        minratio: 0.008
+        maxratio: 0.016
+  - name: Reckless Cinnabar (2, HP < 50%)
+    type: bool
+    effects:
+      - target: self
+        source: hp
+        stat: atk
+        minratio: 0.01
+        maxratio: 0.018
+
+Staff of the Scarlet Sands:
+  - name: Heat Haze at Horizon's End
+    type: static
+    effects:
+      - target: self
+        source: em
+        stat: atk
+        minratio: 0.52
+        maxratio: 1.04
+  - name: Dream of the Scarlet Sands
+    type: stack
+    maxstack: 3
+    text: "Elemental Skill hits opponents (10s)."
+    effects:
+      - target: self
+        source: em
+        stat: atk
+        minratio: 0.28
+        maxratio: 0.56
+
+Summit Shaper:
+  - name: Golden Majesty (1)
+    type: static
+    effects:
+      - target: self
+        stat: shield%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Golden Majesty (2, without shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Golden Majesty (2, with shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+The First Great Magic:
+  - name: Parsifal the Great
+    type: static
+    effects:
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Gimmick
+    type: stack
+    maxstack: 3
+    text: "Characters in the party with the same element as the weilder (included)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Theatrics
+    type: stack-precise
+    text: "Characters in the party with a different element from the weilder."
+    effects:
+      1:
+        - target: self
+          stat: mov spd%
+          minvalue: 0.04
+          maxvalue: 0.12
+      2:
+        - target: self
+          stat: mov spd%
+          minvalue: 0.07
+          maxvalue: 0.15
+      3:
+        - target: self
+          stat: mov spd%
+          minvalue: 0.1
+          maxvalue: 0.18
+
+The Unforged:
+  - name: Golden Majesty (1)
+    type: static
+    effects:
+      - target: self
+        stat: shield%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Golden Majesty (2, without shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Golden Majesty (2, with shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.08
+        maxvalue: 0.16
 
 Thundering Pulse:
   - name: Rule By Thunder
@@ -640,22 +870,100 @@ Thundering Pulse:
           minvalue: 0.4
           maxvalue: 0.8
 
-Splendor of Tranquil Waters:
-  - name: Dawn and Dusk by the Lake
-    type: stack
-    text: When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by 8%/10%/12%/14%/16% for 6s. Max 3 stacks. This effect can be triggered once every 0.2s.
-    maxstack: 3
-    effects:
-      - target: self
-        stat: skill dmg%
-        minvalue: 0.08
-        maxvalue: 0.16
-  - name: Dawn and Dusk by the Lake
-    type: stack
-    text: When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by 14%/17.5%/21%/24.5%/28% for 6s. Max 2 stacks. The aforementioned effects can be triggered even if the wielder is off-field.
-    maxstack: 2
+Tome of the Eternal Flow:
+  - name: Aeon Wave (1)
+    type: static
     effects:
       - target: self
         stat: hp%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Aeon Wave (2)
+    type: stack
+    maxstack: 3
+    text: "Character' HP changes (4s)."
+    effects:
+      - target: self
+        stat: ca dmg%
         minvalue: 0.14
-        maxvalue: 0.28
+        maxvalue: 0.3
+
+Tulaytullah's Remembrance:
+  - name: Bygone Azure Teardrop (1)
+    type: static
+    effects:
+      - target: self
+        stat: na spd%
+        minvalue: 0.1
+        maxvalue: 0.2
+  - name: Bygone Azure Teardrop (2)
+    type: stack
+    maxstack: 10
+    text: "Active when character uses Elemental Skill. Gain 1 stack per second (14s) and 2 when NA hits opponents."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.048
+        maxvalue: 0.096
+
+Verdict:
+  - name: Many Oaths of Dawn and Dusk
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Seal
+    type: stack
+    maxstack: 2
+    text: "Gain 1 stack when obtaining Elemental Shard (15s)."
+    effects:
+      - target: self
+        stat: skill dmg%
+        mineffect: 0.18
+        maxeffect: 0.36
+
+Vortex Vanquisher:
+  - name: Golden Majesty (1)
+    type: static
+    effects:
+      - target: self
+        stat: shield%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Golden Majesty (2, without shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Golden Majesty (2, with shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits an opponent (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Wolf's Gravestone:
+  - name: Wolfish Tracker (1)
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+    - name: Wolfish Tracker (2)
+      type: bool
+      text: "Attacking opponents with less than 30% HP (12s). CD: 30s."
+      effects:
+        - target: team
+          stat: atk%
+          minvalue: 0.4
+          maxvalue: 0.8
