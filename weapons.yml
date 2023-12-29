@@ -2090,7 +2090,7 @@ Toukabou Shigure:
 Wandering Evenstar:
   - name: Woldling Nightstar
     type: bool
-      text: "Effect is triggered every 10s and instances can stack (12s)."
+    text: "Effect is triggered every 10s and instances can stack (12s)."
     effects:
       - target: self
         source: em
