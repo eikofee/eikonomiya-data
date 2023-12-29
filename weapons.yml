@@ -2384,6 +2384,7 @@ Slingshot:
   - name: Slingshot
     type: bool
     text: "Opponent is hit by the arrow within 0.3s after being fired."
+    effects:
       - target: self
         stat: dmg%
         minvalue: 0.36
