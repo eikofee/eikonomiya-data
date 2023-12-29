@@ -151,6 +151,467 @@ Cashflow Supervision:
           minvalue: 0.08
           maxvalue: 0.16
 
+Elegy for the End:
+  - name: The Parting Refrain
+    type: static
+    effects:
+      - target: self
+        stat: em
+        minvalue: 60
+        maxvalue: 120
+  - name: "Millennial Movement: Farewell Song"
+    type: bool
+    text: "Elemental Skill/Burst hits opponents 4 times. Lasts 12s. CD: 20s."
+    effects:
+      - target: team
+        stat: em
+        minvalue: 100
+        maxvalue: 200
+      - target: team
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Engulfing Lightning:
+  - name: "Timeless Dream: Eternal Stove" (1)
+    type: static
+    effects:
+      - target: self
+        source: er%
+        stat: atk%
+        base: 1
+        minratio: 0.28
+        maxratio: 0.56
+        minmaxvalue: 0.8
+        maxmaxvalue: 1.2
+  - name: "Timeless Dream: Eternal Stove" (2)
+    type: bool
+    text: Elemental Burst used (12s).
+    effects:
+      - target: self
+        stat: er%
+        minvalue: 0.3
+        maxvalue: 0.5
+
+Everlasting Moonglow:
+  - name: Byakuya Kougetsu (1)
+    type: static
+    effects:
+      - target: self
+        stat: heal out%
+        minvalue: 0.1
+        maxvalue: 0.2
+  - name: Byakuya Kougetsu (2)
+    type: static
+    effects:
+      - target: self
+        source: hp
+        stat: na dmg
+        minratio: 0.01
+        maxratio: 0.03
+
+Freedom-Sworn:
+  - name: Revolutionary Chorale
+    type: static
+    effects:
+      target: self
+      stat: dmg%
+      minvalue: 0.1
+      maxvalue: 0.2
+  - name: "Millennial Movement: Song of Resistance"
+    type: bool
+    text: "Trigger 2 elemental reactions. Lasts for 12s. CD: 20s"
+    effects:
+      - target: team
+        stat: na dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: team
+        stat: ca dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: team
+        stat: pa dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: team
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Haran Geppaku Futsu:
+  - name: Honed Flow
+    type: static
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Rippling Upheaval
+    type: stack
+    text: Other characters use Elemental Skills to gain stacks. Character uses Elemental Skill (8s).
+    maxstack: 2
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Hunter's Path:
+  - name: At the End of the Beast-Paths
+    type: static
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Tireless Hunt
+    type: bool
+    text: "Character hit with CA. Lasts 12 CAs or 10s. CD: 12s"
+    effects:
+      - target: self
+        source: em
+        stat: ca dmg
+        minratio: 1.6
+        maxratio: 3.2
+
+Jadefall's Splendor:
+  - name: Primordial Jade Regalia
+    type: bool
+    text: "Character uses Elemental Burst or create a shield (3s)."
+    effects:
+      - target: self
+        stat: char.elem dmg%
+        source: hp-flat
+        step: 1000
+        minratio: 0.003
+        maxratio: 0.011
+        minmaxvalue: 0.12
+        maxmaxvalue: 0.44
+
+Kagura's Verity:
+  - name: Kagura Dance of the Sacred Sakura
+    type: stack-precise
+    text: Character deals Elemental Skill damages (16s).
+    effects:
+      1:
+        - target: self
+          stat: skill dmg%
+          minvalue: 0.12
+          maxvalue: 0.24
+      2:
+        - target: self
+          stat: skill dmg%
+          minvalue: 0.24
+          maxvalue: 0.48
+      3:
+        - target: self
+          stat: skill dmg%
+          minvalue: 0.36
+          maxvalue: 0.62
+        - target: self
+          stat: elem dmg%
+          minvalue: 0.12
+          maxvalue: 0.24
+
+Key of Khaj-Nisut:
+  - name: Sunken Song of the Sands
+    type: static
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Grand Hymn
+    type: stack-precise
+    text: Elemental Skill hits opponents (20s).
+    effects:
+      1:
+        - target: self
+          source: hp
+          stat: em
+          minratio: 0.012
+          maxratio: 0.024
+      2:
+        - target: self
+          source: hp
+          stat: em
+          minratio: 0.024
+          maxratio: 0.048
+      3:
+        - target: self
+          source: hp
+          stat: em
+          minratio: 0.036
+          maxratio: 0.052
+        - target: team
+          source: hp
+          stat: em
+          minratio: 0.2
+          maxratio: 0.4
+
+Light of Foliar Incision:
+  - name: Whitemoon Bristle
+    type: static
+    effect:
+      - target: self
+        stat: cr%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Foliar Incision
+    type: bool
+    text: "Character deals elemental damages using NA. Lasts 28 attacks or 12s. CD: 12s."
+    effects:
+      - target: self
+        stat: na dmg
+        source: em
+        minratio: 1.2
+        maxratio: 2.4
+      - target: self
+        stat: skill dmg
+        source: em
+        minratio: 1.2
+        maxratio: 2.4
+
+Lost Prayer to the Sacred Winds:
+  - name: Boundless Blessing (1)
+    type: static
+    effects:
+      - target: self
+        stat: mov spd%
+        value: 0.1
+  - name: Boundless Blessing (2)
+    type: stack
+    maxstack: 4
+    text: "Gain 1 stack every 4s in battle."
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Memory of Dust:
+  - name: Golden Majesty (1)
+    type: static
+    effects:
+      - target: self
+        stat: shield%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Golden Majesty (2, without shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits opponents (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Golden Majesty (2, with shield)
+    type: stack
+    maxstack: 5
+    text: "Character hits opponents (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Mistsplitter Reforged:
+  - name: Mistsplitter's Edge
+    type: static
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Mistsplitter's Emblem
+    type: stack-precise
+    text: "Each condition gives 1 stack: Character deals elemental damages using NA (5s), casts Elemental Burst (10s), has less than 100% Energy."
+    effects:
+      1:
+        - target: self
+          stat: elem dmg%
+          minvalue: 0.08
+          maxvalue: 0.16
+      2:
+        - target: self
+          stat: elem dmg%
+          minvalue: 0.16
+          maxvalue: 0.32
+      3:
+        - target: self
+          stat: elem dmg%
+          minvalue: 0.28
+          maxvalue: 0.56
+
+Polar Star:
+  - name: Daylight's Augury
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Ashen Nightstar
+    type: stack-precise
+    text: "Each condition gives 1 stack: Character hit an opponent with NA, CA, Elemental Skill or Elemental Burst. All stacks lasts 12s."
+    effects:
+      1:
+        - target: self
+          stat: atk%
+          minvalue: 0.1
+          maxvalue: 0.2
+      2:
+        - target: self
+          stat: atk%
+          minvalue: 0.2
+          maxvalue: 0.4
+      3:
+        - target: self
+          stat: atk%
+          minvalue: 0.3
+          maxvalue: 0.6
+      4:
+        - target: self
+          stat: atk%
+          minvalue: 0.48
+          maxvalue: 0.96
+
+Primordial Jade Cutter:
+  - name: Protector's Virtue (1)
+    type: static
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Protectors' Virtue (2)
+    type: static
+    effects:
+      - target: self
+        source: hp
+        stat: atk
+        minratio: 0.012
+        maxratio: 0.024
+
+Primordial Jade Winged-Spear:
+  - name: Eagle Spear of Justice
+    type: stack-precise
+    text: "Gain 1 stack when hitting an opponent (6s)."
+    effects:
+      1:
+        - target: self
+          stat: atk%
+          minvalue: 0.032
+          maxvalue: 0.06
+      2:
+        - target: self
+          stat: atk%
+          minvalue: 0.064
+          maxvalue: 0.12
+      3:
+        - target: self
+          stat: atk%
+          minvalue: 0.096
+          maxvalue: 0.18
+      4:
+        - target: self
+          stat: atk%
+          minvalue: 0.0128
+          maxvalue: 0.24
+      5:
+        - target: self
+          stat: atk%
+          minvalue: 0.16
+          maxvalue: 0.3
+      6:
+        - target: self
+          stat: atk%
+          minvalue: 0.192
+          maxvalue: 0.36
+      7:
+        - target: self
+          stat: atk%
+          minvalue: 0.224
+          maxvalue: 0.42
+        - target: self
+          stat: dmg%
+          minvalue: 0.12
+          maxvalue: 0.24
+
+Redhorn Stonethresher:
+  - name: Gokadaiou Otogibanashi (1)
+    type: static
+    effects:
+      - target: self
+        stat: def%
+        minvalue: 0.28
+        maxvalue: 0.56
+  - name: Gokadaiou Otogibanashi (2)
+    type: static
+    effects:
+      - target: self
+        source: def
+        stat: na dmg
+        minratio: 0.4
+        maxratio: 0.8
+      - target: self
+        source: def
+        stat: ca dmg
+        minratio: 0.4
+        maxratio: 0.8
+
+Skyward Atlas:
+  - name: Wandering Clouds
+    type: static
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Favor of the Clouds
+    type: info
+    effects:
+      - text: "Cloud damage per hit (15s). CD: 30s."
+        source: atk
+        minratio: 1.6
+        maxratio: 3.2
+
+Skyward Blade:
+  - name: Sky-Piercing Fang
+    type: static
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.04
+        maxvalue: 0.08
+  - name: Skypiercing Might (1)
+    type: bool
+    text: "Character uses Elemental Burst (12s)."
+    effects:
+      - target: self
+        stat: mov spd%
+        minvalue: 0.1
+      - target: self
+        stat: atk spd%
+        value: 0.1
+      - target: self
+        stat: na dmg
+        source: atk
+        minratio: 0.2
+        maxratio: 0.4
+      - target: self
+        stat: ca dmg
+        source: atk
+        minratio: 0.2
+        maxratio: 0.4
+
+
 Thundering Pulse:
   - name: Rule By Thunder
     type: static
@@ -161,7 +622,7 @@ Thundering Pulse:
         maxvalue: 0.4
   - name: Thunder Emblem
     type: stack-precise
-    maxstack: 3
+    text: "Each condition gives 1 stack: Character deals damage using NA (5s), casts Elemental Skills (10s), has less than 100% energy."
     effects:
       1:
         - target: self
