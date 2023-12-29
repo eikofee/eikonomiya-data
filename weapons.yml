@@ -1171,7 +1171,7 @@ Dodoco Tales:
     text: "Hit opponents with CA (6s)."
     effects:
       - target: self
-        stat: na dmg%
+        stat: atk%
         minvalue: 0.08
         maxvalue: 0.16
 
@@ -1322,7 +1322,7 @@ Flowing Purity:
         minvalue: 0.08
         maxvalue: 0.16
   - name: Bond of Life
-    type: ratio
+    type: bool
     text: "Bond of Life cleared (15s) (24% max hp considered)."
     effects:
       - target: self
@@ -1488,5 +1488,709 @@ Lion's Roar:
         minvalue: 0.2
         maxvalue: 0.36
 
-# Lithic Blade:
-#   - name: "Lithic Axiom: Unity"
+Lithic Blade:
+  - name: "Lithic Axiom: Unity"
+    type: stack
+    maxstack: 4
+    text: "Number of characters from Liyue in the party."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.07
+        maxvalue: 0.11
+      - target: self
+        stat: cr%
+        minvalue: 0.03
+        maxvalue: 0.07
+
+Lithic Spear:
+  - name: "Lithic Axiom: Unity"
+    type: stack
+    maxstack: 4
+    text: "Number of characters from Liyue in the party."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.07
+        maxvalue: 0.11
+      - target: self
+        stat: cr%
+        minvalue: 0.03
+        maxvalue: 0.07
+
+Luxurious Sea-Lord:
+  - name: Oceanic Victory
+    type: static
+    effects:
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Tuna
+    type: info
+    effects:
+      - info: "Tuna DMG (CD: 15s)"
+        source: atk
+        minratio: 1
+        maxratio: 2
+
+Mailed Flower:
+  - name: Whispers of Wind and Flower
+    type: bool
+    text: "Character hits an opponent with Elemental Skill or triggers an Elemental Reaction (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: em
+        minvalue: 48
+        maxvalue: 96
+  
+Makhaira Aquamarine:
+  - name: Desert Pavilion
+    type: bool
+    text: "Effect is triggered every 10s and instances can stack (12s)."
+    effects:
+      - target: self
+        source: em
+        stat: atk
+        minratio: 0.24
+        maxratio: 0.48
+      - target: team
+        source: em
+        minratio: 0.072
+        maxratio: 0.148
+
+Mappa Mare:
+  - name: Infusion Scroll
+    type: stack
+    maxstack: 2
+    text: "Gain 1 stack when triggering Elemental reaction (10s)."
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Missinve Windspear:
+  - name: The Wind Unattained
+    type: bool
+    text: "Triggering Elemental reaction (10s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: em
+        minvalue: 48
+        maxvalue: 96
+
+Mitternachts Waltz:
+  - name: Evernight Duet (1)
+    type: bool
+    text: "NA hits opponents (5s)."
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Everning Duet (2)
+    type: bool
+    text "Elemental Skill hits opponents (5s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Moonpiercer:
+  - name: Stillwood Moonshadow
+    type: bool
+    text: "Can be picked-up (12s). Created when triggering Dendro-related reaction (10s)."
+    effects:
+      - target: team
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+
+Mouun's Moon:
+  - name: Watatsumi Wavewalker
+    type: stack
+    maxstack: 333
+    text: "Gain 1 stack for every point of Energy capacity in the party. (333 max, up to 0.08% incorrect value)"
+    effects:
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.0012
+        maxvalue: 0.0024
+
+Oathsworn Eye:
+  - name: People of the Faltering Light
+    type: bool
+    text: "Elemental Skill is used (10s)."
+    effects:
+      - target: self
+        stat: er%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Portable Power Saw:
+  - name: Stoic's Symbol
+    type: stack
+    maxstack: 3
+    text: "Gained when healed. Are consummed when using Elemental Skill or Burst (10s). CD: 15s."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 40
+        maxvalue: 80
+
+Prospector's Drill:
+  - name: Unity's Symbol
+    type: stack
+    maxstack: 3
+    text: "Gained when healed. Are consummed when using Elemental Skill or Burst (10s). CD: 15s."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.03
+        maxvalue: 0.07
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.07
+        maxvalue: 0.13
+
+Prototype Amber:
+  - name: Gliding
+    type: none
+
+Prototype Archaic:
+  - name: Crush
+    type: info
+    effects:
+      - info: "Additional DMG (CD: 15s)"
+        source: atk
+        minratio: 2.4
+        maxratio: 4.8
+
+Prototype Crescent:
+  - name: Unreturning
+    type: bool
+    text: "CA hits weak point (10s)."
+    effects:
+      - target: self
+        stat: mov spd%
+        value: 0.1
+      - target: self
+        stat: atk%
+        minvalue: 0.36
+        maxvalue: 0.72
+
+Prototype Rancour:
+  - name: Smashed Stone
+    type: stack
+    maxstack: 4
+    text: "Hit opponents (6s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.04
+        maxvalue: 0.08
+      - target: self
+        stat: def%
+        minvalue: 0.04
+        maxvalue: 0.08
+
+Prototype Starglitter:
+  - name: Magic Affinity
+    type: stack
+    maxstack: 2
+    text: "Elemental Skill is used (12s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Rainslasher:
+  - name: Bane of Storm and Tide
+    type: bool
+    text: "Opponent is affected by Hydro or Electro."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.2
+        maxvalue: 0.36
+
+Range Gauge:
+  - name: Unity's Symbol
+    type: stack
+    maxstack: 3
+    text: "Gained when healed. Are consummed when using Elemental Skill or Burst (10s). CD: 15s."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.03
+        maxvalue: 0.07
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.07
+        maxvalue: 0.13
+
+Rightful Reward:
+  - name: Tip of the Spear
+    type: none
+
+Royal Bow:
+  - name: Focus
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack when hitting an opponent. Cleared on critical hit."
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Royal Greatsword:
+  - name: Focus
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack when hitting an opponent. Cleared on critical hit."
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Royal Grimoire:
+  - name: Focus
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack when hitting an opponent. Cleared on critical hit."
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Royal Longsword:
+  - name: Focus
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack when hitting an opponent. Cleared on critical hit."
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Royal Spear:
+  - name: Focus
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack when hitting an opponent. Cleared on critical hit."
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.08
+        maxvalue: 0.16
+
+Rust:
+  - name: Rapid Firing
+    type: static
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.4
+        maxvalue: 0.8
+      - target: self
+        stat: ca dmg%
+        value: -0.1
+
+Sacrificial Bow:
+  - name: Composed
+    type: none
+
+Sacrificial Fragments:
+  - name: Composed
+    type: none
+
+Sacrificial Greatsword:
+  - name: Composed
+    type: none
+
+Sacrificial Jade:
+  - name: Jade Circulation
+    type: bool
+    text: "Character is off-field."
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.32
+        maxvalue: 0.64
+      - target: self
+        stat: em
+        minvalue: 40
+        maxvalue: 80
+
+Sacrificial Sword:
+  - name: Composed
+    type: none
+
+Sapwood Blade:
+  - name: Forest Sanctuary
+    type: bool
+    text: "Can be picked-up (12s). Created when triggering Dendro-related reaction (10s)."
+    effects:
+      - target: team
+        stat: em
+        minvalue: 60
+        maxvalue: 120
+
+Scion of the Blazing Sun:
+  - name: Heartsearer
+    type: bool
+    text: "Opponent hit by Sunfire Arrow (CA) (10s). CD: 10s."
+    effects:
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.28
+        maxvalue: 0.56
+  - name: Sunfire Arrow
+    type: info
+    effects:
+      - info: "Sunfire Arrow DMG (CD: 10s)"
+        source: atk
+        minratio: 0.6
+        maxratio: 1.2
+
+Serpent Spine:
+  - name: Wavesplitter
+    type: stack
+    maxstack: 5
+    text: "Gain 1 stack every 4s on-field."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.06
+        maxvalue: 0.1
+
+Snow-Tombed Starsilver:
+  - name: Frost Burial
+    type: info
+    effects:
+      - text: "Everfrost Icicle (no Cryo). CD: 10s."
+        source: atk
+        minratio: 0.8
+        maxratio: 1.4
+      - text: "Everfrost Icicle (Cryo). CD: 10s."
+        source: atk
+        minratio: 2
+        maxratio: 3.6
+
+Solar Pearl:
+  - name: Solar Shine (1)
+    type: bool
+    text: "Hit opponent with NA (6s)."
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Solar Shine (2)
+    type: bool
+    text: "Hit opponent with Elemental Skill or Burst (6s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Song of Stillness:
+  - name: Benthic Pulse
+    type: bool
+    text: "Character is healed (8s)."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+
+Sword of Narzissenkreuz:
+  - name: Hero's Blade
+    type: info
+    effects:
+      - info: "Pneuma/Ousia DMG (CD: 12s)"
+        source: atk
+        minratio: 1.6
+        maxratio: 3.2
+
+Talking Stick:
+  - name: \"The Silver Tongue\" (1)
+    type: bool
+    text: "Character is affected by Pyro (15s). (CD: 12s)"
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: \"The Silver Tongue\" (2)
+    type: bool
+    text: "Character is affected by Hydro, Cryo, Electro or Dendro (15s). (CD: 12s)"
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+The Alley Flash:
+  - name: Itinerant Hero
+    type: bool
+    text: "Character has not taken damage for 5s."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+The Bell:
+  - name: Rebellious Guardian (1)
+    type: info
+    effects:
+      - info: "Shield power (10s, CD: 45s)"
+        source: hp
+        minratio: 0.2
+        maxratio: 0.32
+  - name: Rebellious Guardian (2)
+    type: bool
+    text: "Character is protected by a shield."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+The Black Sword:
+  - name: Justice (1)
+    type: static
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Justice (2)
+    type: info
+    effects:
+      - info: "Heal on Crit (CD: 5s)"
+        source: atk
+        minvalue: 0.6
+        maxvalue: 1
+
+The Dockhand's Assistant:
+  - name: Stoic's Symbol
+    type: stack
+    maxstack: 3
+    text: "Gained when healed. Are consummed when using Elemental Skill or Burst (10s). CD: 15s."
+    effects:
+      - target: self
+        stat: em
+        minvalue: 40
+        maxvalue: 80
+
+The Flute:
+  - name: The Chord
+    type: info
+    effects:
+      - info: "Harmonics DMG (5 NA/CA)"
+        source: atk
+        minvalue: 1
+        maxvalue: 2
+
+The Stringless:
+  - name: Arrowless Song
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+The Viridescent Hunt:
+  - name: Verdant Wind
+    type: info
+    effects:
+      - info: "Cyclone DMG (x8, CD: 14~10s)"
+        source: atk
+        minvalue: 0.4
+        maxvalue: 0.8
+
+The Widsith:
+  - name: Debut (Recitative)
+    type: bool
+    effects:
+      - target: self
+        stats: atk%
+        minvalue: 0.6
+        maxvalue: 1.2
+  - name: Debut (Aria)
+    type: bool
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.48
+        maxvalue: 0.96
+  - name: Interlude
+    type: bool
+    effects:
+      - target: self
+        stat: em
+        minvalue: 240
+        maxvalue: 480
+
+Tidal Shadow:
+  - name: White Cruising Wave
+    type: bool
+    text: "Character is healed (8s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Toukabou Shigure:
+  - name: "Kaidan: Rainfall Earthbinder"
+    type: bool
+    text: "Opponent is cursed (10s). CD: 15s/Opponent is defeated while in duration."
+    effects:
+      - target: self
+        stat: smg%
+        minvalue: 0.16
+        maxvalue: 0.32
+
+Wandering Evenstar:
+  - name: Woldling Nightstar
+    type: bool
+      text: "Effect is triggered every 10s and instances can stack (12s)."
+    effects:
+      - target: self
+        source: em
+        stat: atk
+        minratio: 0.24
+        maxratio: 0.48
+      - target: team
+        source: em
+        minratio: 0.072
+        maxratio: 0.148
+
+Wavebreaker's Fin:
+  - name: Watatsumi Wavewalker
+    type: stack
+    maxstack: 333
+    text: "Gain 1 stack for every point of Energy capacity in the party. (333 max, up to 0.08% incorrect value)"
+    effects:
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.0012
+        maxvalue: 0.0024
+
+Whiteblind:
+  - name: Infusion Blade
+    type: stack
+    maxstack: 4
+    text: "Gain 1 stack when hitting opponents (6s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.06
+        maxvalue: 0.12
+      - target: self
+        stat: def%
+        minvalue: 0.06
+        maxvalue: 0.12
+
+Windblume Ode:
+  - name: Windblume Wish
+    type: bool
+    text: "Elemental Skill is used (6s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+
+Wine and Song:
+  - name: Ever-Changing
+    type: bool
+    text: "Character sprints (5s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Wolf-Fang:
+  - name: Northwind Wolf (1)
+    type: static
+    effects:
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: burst dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Northwind Wolf (2)
+    type: stack
+    maxstack: 4
+    text: "Elemental Skill hits opponent (10s)"
+    effects:
+      - target: self
+        stat: skill cr%
+        minvalue: 0.02
+        maxvalue: 0.04
+  - name: Northwind Wolf (3)
+    type: stack
+    maxstack: 4
+    text: "Elemental Burst hits opponent (10s)"
+    effects:
+      - target: self
+        stat: burst cr%
+        minvalue: 0.02
+        maxvalue: 0.04
+
+Xiphos' Moonlight:
+  - name: Jinni's Whisper
+    type: bool
+    text: "Triggers every 10s. Can stack with multiple weapons (12s)."
+    effects:
+      - target: self
+        stat: er%
+        source: em
+        minratio: 0.00036
+        maxratio: 0.00072
+      - target: team
+        stat: er%
+        source: em
+        minratio: 0.000108
+        maxratio: 0.000216
