@@ -1,16 +1,168 @@
 ---
+A Thousand Floating Dreams:
+  - type: wip
+
+Amos' Bow:
+  - name: Strong-Willed (1)
+    type: static
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Strong-Willed (2)
+    type: stack
+    text: Arrow is in the air for 0.1s up to 0.5s.
+    maxstack: 5
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.8
+        maxvalue: 0.16
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.8
+        maxvalue: 0.16
+
+Aqua Simulacra:
+  - name: The Cleansing Form (1)
+    type: static
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: The Cleansing Form (2)
+    type: bool
+    text: Opponents are nearby.
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Aquila Favonia:
+  - name: Falcon's Defiance
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Beacon of the Reed Sea:
+  - name: Desert Watch (1)
+    type: bool
+    text: Elemental Skill hits an opponent (8s).
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Desert Watch (2)
+    type: bool
+    text: Character takes damages (8s).
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Desert Watch (3)
+    type: bool
+    text: Character is not protected by a shield.
+    effects:
+      - target: self
+        stat: hp%
+        minvalue: 0.32
+        maxvalue: 0.64
+
+Calamity Queller:
+  - name: Extinguishing Precept
+    type: static
+    effects:
+      - target: self
+        stat: elem dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+  - name: Consummation (on-field)
+      type: stack
+      text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
+      maxstack: 6
+      effects:
+        - target: self
+          stat: atk%
+          minvalue: 0.032
+          maxvalue: 0.064
+  - name: Consummation (off-field)
+      type: stack
+      text: Obtained after using Elemental Skill (20s). Gain 1 stack per second.
+      maxstack: 6
+      effects:
+        - target: self
+          stat: atk%
+          minvalue: 0.064
+        maxvalue: 0.0128
+
+Cashflow Supervision:
+  - name: Golden Blood-Tide (1)
+    type: static
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.16
+        maxvalue: 0.32
+  - name: Golden Blood-Tide (2)
+    type: stack-precise
+    text: HP increase or decrease (4s). Can be triggered every 0.3s.
+    effects:
+      1:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.16
+          maxvalue: 0.32
+        - target: self
+          stat: ca dmg%
+          minvalue: 0.14
+          maxvalue: 0.28
+      2:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.32
+          maxvalue: 0.64
+        - target: self
+          stat: ca dmg%
+          minvalue: 0.28
+          maxvalue: 0.56
+      3:
+        - target: self
+          stat: na dmg%
+          minvalue: 0.48
+          maxvalue: 0.96
+        - target: self
+          stat: ca dmg%
+          minvalue: 0.42
+          maxvalue: 0.84
+        - target: self
+          stat: atk spd%
+          minvalue: 0.08
+          maxvalue: 0.16
+
 Thundering Pulse:
   - name: Rule By Thunder
-    type: buff
-    buff:
+    type: static
+    effects:
       - target: self
         stat: atk%
         minvalue: 0.2
         maxvalue: 0.4
   - name: Thunder Emblem
-    type: stack-precise buff
+    type: stack-precise
     maxstack: 3
-    buff:
+    effects:
       1:
         - target: self
           stat: na dmg%
@@ -29,19 +181,19 @@ Thundering Pulse:
 
 Splendor of Tranquil Waters:
   - name: Dawn and Dusk by the Lake
-    type: stack buff
+    type: stack
     text: When the equipping character's current HP increases or decreases, Elemental Skill DMG dealt will be increased by 8%/10%/12%/14%/16% for 6s. Max 3 stacks. This effect can be triggered once every 0.2s.
     maxstack: 3
-    buff:
+    effects:
       - target: self
         stat: skill dmg%
         minvalue: 0.08
         maxvalue: 0.16
   - name: Dawn and Dusk by the Lake
-    type: stack buff
+    type: stack
     text: When other party members' current HP increases or decreases, the equipping character's Max HP will be increased by 14%/17.5%/21%/24.5%/28% for 6s. Max 2 stacks. The aforementioned effects can be triggered even if the wielder is off-field.
     maxstack: 2
-    buff:
+    effects:
       - target: self
         stat: hp%
         minvalue: 0.14
