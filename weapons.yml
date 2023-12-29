@@ -197,7 +197,7 @@ Elegy for the End:
         maxvalue: 0.4
 
 Engulfing Lightning:
-  - name: "Timeless Dream: Eternal Stove" (1)
+  - name: "Timeless Dream: Eternal Stove (1)"
     type: static
     effects:
       - target: self
@@ -208,7 +208,7 @@ Engulfing Lightning:
         maxratio: 0.56
         minmaxvalue: 0.8
         maxmaxvalue: 1.2
-  - name: "Timeless Dream: Eternal Stove" (2)
+  - name: "Timeless Dream: Eternal Stove (2)"
     type: bool
     text: Elemental Burst used (12s).
     effects:
