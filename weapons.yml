@@ -2194,3 +2194,238 @@ Xiphos' Moonlight:
         source: em
         minratio: 0.000108
         maxratio: 0.000216
+
+Black Tassel:
+  - name: Bane of the Soft
+    type: bool
+    text: "Opponent is a slime"
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.4
+        maxvalue: 0.8
+
+Bloodtainted Greatsword:
+  - name: Bane of Fire and Thunder
+    type: bool
+    text: "Opponent is affected by Pyro or Electro"
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Cool Steel:
+  - name: Bane of Water and Ice
+    type: bool
+    text: "Opponent is affected by Hydro or Cryo"
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Dark Iron Sword:
+  - name: Overloaded
+    type: bool
+    text: "Trigger Electro-related elemental reaction (12s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Debate Club:
+  - name: Blunt Conclusion
+    type: info
+    effects:
+      - info: "Additionnal DMG (/3s)"
+        source: atk
+        minratio: 0.6
+        maxratio: 1.2
+
+Emerald Orb:
+  - name: Rapids
+    type: bool
+    text: "Trigger Hydro-related elemental reaction (12s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.2
+        maxvalue: 0.4
+
+Ferrous Shadow:
+  - name: Unbending
+    type: bool
+    text: "Character's HP are below 70~90%."
+    effects:
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.3
+        maxvalue: 0.5
+
+Fillet Blade:
+  - name: Gash
+    type: info
+    effects:
+      - info: "Bonus hit (CD: 15~11s)"
+        source: atk
+        minratio: 2.4
+        maxratio: 4
+
+Halberd:
+  - name: Heavy
+    type: bool
+    text: "NA only. CD: 10s."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 1.6
+        maxvalue: 3.2
+
+Harbinger of Dawn:
+  - name: Vigorous
+    type: bool
+    text: "Character's HP are above 90%"
+    effects:
+      - target: self
+        stat: cr%
+        minvalue: 0.14
+        maxvalue: 0.28
+
+Magic Guide:
+  - name: Bane of Storm and Tide
+    type: bool
+    text: "Opponent is affected by Electro or Hydro."
+    efects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Messenger:
+  - name: Archer's Message
+    type: info
+    effects:
+      - info: "Bonus crit dmg. CD: 10s"
+        source: atk
+        minratio: 1
+        maxratio: 2
+
+Otherworldly Story:
+  - name: Energy Shower
+    type: none
+
+Raven Bow:
+  - name: Bane of Flame and Water
+    type: bool
+    text: "Opponent is affected by Pyro or Hydro."
+    effects:
+      - target: self
+        stat: dmg%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Recurve Bow:
+  - name: Cull the Weak
+    type: none
+
+Sharpshooter's Oath:
+  - name: Precise (NA)
+    type: bool
+    text: "Hit on weak point."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+  - name: Precise (CA)
+    type: bool
+    text: "Hit on weak point."
+    effects:
+      - target: self
+        stat: ca dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Skyrider Greatsword:
+  - name: Courage
+    type: stack
+    maxstack: 4
+    text: "Hitting opponent (6s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.06
+        maxvalue: 0.1
+
+Skyrider Sword:
+  - name: Determination
+    type: bool
+    text: "Elemental Burst is used (15s)."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.24
+      - target: self
+        stat: mov spd%
+        minvalue: 0.12
+        maxvalue: 0.24
+
+Slingshot:
+  - name: Slingshot (disabled)
+    type: bool
+    text: "Arrow travels more than 0.3s."
+    effects:
+      - target: self
+        stat: dmg%
+        value: -0.1
+  - name: Slingshot
+    type: bool
+    text: "Opponent is hit by the arrow within 0.3s after being fired."
+      - target: self
+        stat: dmg%
+        minvalue: 0.36
+        maxvalue: 0.6
+
+Thrilling Tales of Dragon Slayers:
+  - name: Heritage
+    type: bool
+    text: "Characted is being switched out (10s). CD: 20s."
+    effects:
+      - target: team
+        stat: atk%
+        minvalue: 0.24
+        maxvalue: 0.48
+
+Traveler's Handy Sword:
+  - name: Journey
+    type: none
+
+Twin Nephrite:
+  - name: Guerilla Tactics
+    type: bool
+    text: "Opponent has been defeated within 15s."
+    effects:
+      - target: self
+        stat: atk%
+        minvalue: 0.12
+        maxvalue: 0.2
+      - target: self
+        stat: mov spd%
+        minvalue: 0.12
+        maxvalue: 0.2
+
+White Iron Greatsword:
+  - name: Cull the Weak
+    type: none
+
+White Tassel:
+  - name: Sharp
+    type: static
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
