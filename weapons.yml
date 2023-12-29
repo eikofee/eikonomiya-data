@@ -959,14 +959,14 @@ Wolf's Gravestone:
         stat: atk%
         minvalue: 0.2
         maxvalue: 0.4
-    - name: Wolfish Tracker (2)
-      type: bool
-      text: "Attacking opponents with less than 30% HP (12s). CD: 30s."
-      effects:
-        - target: team
-          stat: atk%
-          minvalue: 0.4
-          maxvalue: 0.8
+  - name: Wolfish Tracker (2)
+    type: bool
+    text: "Attacking opponents with less than 30% HP (12s). CD: 30s."
+    effects:
+      - target: team
+        stat: atk%
+        minvalue: 0.4
+        maxvalue: 0.8
 
 \"The Catch\":
   - name: Shanty
