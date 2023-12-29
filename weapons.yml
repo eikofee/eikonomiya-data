@@ -1599,7 +1599,7 @@ Mitternachts Waltz:
         maxvalue: 0.4
   - name: Everning Duet (2)
     type: bool
-    text "Elemental Skill hits opponents (5s)."
+    text: "Elemental Skill hits opponents (5s)."
     effects:
       - target: self
         stat: na dmg%
