@@ -141,6 +141,7 @@ Cashflow Supervision:
         maxvalue: 0.32
   - name: Golden Blood-Tide (2)
     type: stack-precise
+    maxstack: 3
     text: HP increase or decrease (4s). Can be triggered every 0.3s.
     effects:
       1:
@@ -316,6 +317,7 @@ Jadefall's Splendor:
 Kagura's Verity:
   - name: Kagura Dance of the Sacred Sakura
     type: stack-precise
+    maxstack: 3
     text: Character deals Elemental Skill damages (16s).
     effects:
       1:
@@ -348,6 +350,7 @@ Key of Khaj-Nisut:
         maxvalue: 0.4
   - name: Grand Hymn
     type: stack-precise
+    maxstack: 3
     text: Elemental Skill hits opponents (20s).
     effects:
       1:
@@ -451,6 +454,7 @@ Mistsplitter Reforged:
         maxvalue: 0.24
   - name: Mistsplitter's Emblem
     type: stack-precise
+    maxstack: 3
     text: "Each condition gives 1 stack: Character deals elemental damages using NA (5s), casts Elemental Burst (10s), has less than 100% Energy."
     effects:
       1:
@@ -483,6 +487,7 @@ Polar Star:
         maxvalue: 0.24
   - name: Ashen Nightstar
     type: stack-precise
+    maxstack: 4
     text: "Each condition gives 1 stack: Character hit an opponent with NA, CA, Elemental Skill or Elemental Burst. All stacks lasts 12s."
     effects:
       1:
@@ -526,6 +531,7 @@ Primordial Jade Cutter:
 Primordial Jade Winged-Spear:
   - name: Eagle Spear of Justice
     type: stack-precise
+    maxstack: 7
     text: "Gain 1 stack when hitting an opponent (6s)."
     effects:
       1:
@@ -797,6 +803,7 @@ The First Great Magic:
         maxvalue: 0.32
   - name: Theatrics
     type: stack-precise
+    maxstack: 3
     text: "Characters in the party with a different element from the weilder."
     effects:
       1:
@@ -852,6 +859,7 @@ Thundering Pulse:
         maxvalue: 0.4
   - name: Thunder Emblem
     type: stack-precise
+    maxstack: 3
     text: "Each condition gives 1 stack: Character deals damage using NA (5s), casts Elemental Skills (10s), has less than 100% energy."
     effects:
       1:
