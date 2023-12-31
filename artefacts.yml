@@ -410,15 +410,13 @@ Emblem of Severed Fate:
         stat: er%
         value: 0.2
   - tag: 4pc
-    type: ratio
+    type: static
     text: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.
-    source:
-      - target: self
-        stat: er%
     effects:
       - target: self
+        source: er%
         stat: burst dmg%
-        value: 0.25
+        ratio: 0.25
         maxvalue: 0.75
 
 Crimson Witch of Flames:
