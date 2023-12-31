@@ -430,7 +430,7 @@ Crimson Witch of Flames:
     type: static
     effects:
       - target: self
-        stat: overload dmg%
+        stat: overloaded dmg%
         value: 0.4
       - target: self
         stat: burning dmg%
