@@ -552,7 +552,7 @@ Primordial Jade Winged-Spear:
       4:
         - target: self
           stat: atk%
-          minvalue: 0.0128
+          minvalue: 0.128
           maxvalue: 0.24
       5:
         - target: self
@@ -695,7 +695,7 @@ Song of Broken Spines:
 Splendor of Tranquil Waters:
   - name: Dawn and Dusk by the Lake (1)
     type: stack
-    text: "Characters'HP increases or decreases."
+    text: "Character's HP increases or decreases (6s)."
     maxstack: 3
     effects:
       - target: self
@@ -704,7 +704,7 @@ Splendor of Tranquil Waters:
         maxvalue: 0.16
   - name: Dawn and Dusk by the Lake (2)
     type: stack
-    text: Other characters' current HP increases or decreases.
+    text: Other characters' current HP increases or decreases (6s).
     maxstack: 2
     effects:
       - target: self
