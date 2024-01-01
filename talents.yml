@@ -1,0 +1,10 @@
+Raiden Shogun:
+  - name: Enlightened One
+    tag: A4
+    type: static
+    effects:
+      - target: self
+        source: er%
+        base: 1
+        stat: electro dmg%
+        ratio: 0.4
