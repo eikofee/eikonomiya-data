@@ -929,8 +929,8 @@ Verdict:
     effects:
       - target: self
         stat: skill dmg%
-        mineffect: 0.18
-        maxeffect: 0.36
+        minvalue: 0.18
+        maxvalue: 0.36
 
 Vortex Vanquisher:
   - name: Golden Majesty (1)
