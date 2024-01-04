@@ -2057,7 +2057,7 @@ The Widsith:
     type: bool
     effects:
       - target: self
-        stats: atk%
+        stat: atk%
         minvalue: 0.6
         maxvalue: 1.2
   - name: Debut (Aria)
