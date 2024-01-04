@@ -14,3 +14,4 @@ hydro dmg%: 0.06
 pyro dmg%: 0.06
 cryo dmg%: 0.06
 phys dmg%: 0.075
+heal out%: 0.046
