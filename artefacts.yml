@@ -108,7 +108,7 @@ Nymph's Dream:
     type: stack-precise
     text: After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.
     maxstack: 3
-    stacks:
+    effects:
       1:
         - target: self
           stat: atk%
@@ -355,7 +355,7 @@ Pale Flame:
     type: stack-precise
     text: When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.
     maxstack: 2
-    stacks:
+    effects:
       1:
         - target: self
           stat: atk%
