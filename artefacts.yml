@@ -210,7 +210,7 @@ Gilded Dreams:
     maxstack: 3
     effects:
       - target: self
-        stat: EM
+        stat: em
         value: 50
 
 Deepwood Memories:
