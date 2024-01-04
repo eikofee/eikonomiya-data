@@ -380,7 +380,7 @@ Key of Khaj-Nisut:
 Light of Foliar Incision:
   - name: Whitemoon Bristle
     type: static
-    effect:
+    effects:
       - target: self
         stat: cr%
         minvalue: 0.04
