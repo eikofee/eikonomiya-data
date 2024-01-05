@@ -2,9 +2,35 @@ Raiden Shogun:
   - name: Enlightened One
     tag: A4
     type: static
+    text: Each % above 100% of Energy Recharges gives 0.4 Electro DMG%.
     effects:
       - target: self
         source: er%
         base: 1
         stat: electro dmg%
         ratio: 0.4
+
+Sangonomiya Kokomi:
+  - name: Flawless Strategy
+    tag: Passive
+    type: static
+    effects:
+      - target: self
+        stat: heal out%
+        value: 0.25
+      - target: self
+        stat: cr%
+        value: -1
+  - name: Song of Pearls
+    tag: A4
+    type: bool
+    text: In Ceremonial Garment state (Elemental Burst).
+    effects:
+      - target: self
+        source: heal out%
+        stat: na dmg%
+        ratio: 0.15
+      - target: self
+        source: heal out%
+        stat: ca dmg%
+        ratio: 0.15
