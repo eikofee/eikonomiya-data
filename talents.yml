@@ -10,6 +10,60 @@ Raiden Shogun:
         stat: electro dmg%
         ratio: 0.4
 
+Hu Tao:
+  - name: Flutter By
+    tag: A1
+    type: bool
+    text: Paramita Papilio ends (8s).
+    effects:
+      - target: team-exclusive
+        stat: cr%
+        value: 0.12
+  - name: Sanguine Rouge
+    tag: A4
+    type: bool
+    text: Hu Tao's HP < 50%.
+    effects:
+      - target: self
+        stat: pyro dmg%
+        value: 0.33
+
+Chevreuse:
+  - name: Vanguard's Coordinated Tactics
+    tag: A1
+    type: bool
+    text: Target is affected by Overloaded (6s).
+    effects:
+      - target: target
+        stat: pyro res%
+        value: -0.4
+      - target: target
+        stat: electro res%
+        value: -0.4
+  - name: Vertical Force Coordination
+    tag: A4
+    type: bool
+    text: Chevreuse fired an Overloaded Ball (Elemental Skill following an Overloaded reaction) (30s).
+    effects:
+      - target: team
+        stat: atk%
+        source: hp
+        step: 1000
+        ratio: 0.01
+        maxvalue: 0.4
+  - name: In Pursuit of Ending Evil
+    tag: C6
+    type: stack
+    maxstack: 3
+    text: Character is healed by Chevreuse's Elemental Skill (8s).
+    effects:
+      - target: self
+        stat: pyro dmg%
+        value: 0.2
+      - target: self
+        stat: electro dmg%
+        value: 0.2
+
 Sangonomiya Kokomi:
   - name: Flawless Strategy
     tag: Passive
