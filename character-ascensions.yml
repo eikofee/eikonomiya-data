@@ -153,3 +153,5 @@ Faruzan:
   stat: atk%
 Navia:
   stat: cdmg%
+Chevreuse:
+  stat: hp%
