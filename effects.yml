@@ -1,0 +1,19 @@
+Fervent Flame:
+  source: pyro resonance
+  type: static
+  effects:
+    - target: team
+      stat: atk%
+      value: 0.25
+
+High Voltage:
+  source: electro resonance
+  type: none
+
+Soothing Water:
+  source: hydro resonance
+  type: static
+  effects:
+    - target: team
+      stat: hp%
+      value: 0.25
