@@ -1,4 +1,4 @@
-Fervent Flame:
+- name: Fervent Flame
   source: pyro resonance
   type: static
   effects:
@@ -6,11 +6,11 @@ Fervent Flame:
       stat: atk%
       value: 0.25
 
-High Voltage:
+- name: High Voltage
   source: electro resonance
   type: none
 
-Soothing Water:
+- name: Soothing Water
   source: hydro resonance
   type: static
   effects:
