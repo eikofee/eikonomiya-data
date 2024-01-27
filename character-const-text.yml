@@ -1136,7 +1136,7 @@ Lisa:
     text: Increases the Level of Violet Arc by 3. Maximum upgrade level is 15.
   c6:
     name: Pulsating Witch
-    text: When Lisa takes the field, she applies 3 stacks of Violet Arc's Conductive status onto nearby opponents. This effect can only occu once every 5s.
+    text: When Lisa takes the field, she applies 3 stacks of Violet Arc's Conductive status onto nearby opponents. This effect can only occur once every 5s.
 Lynette:
   c1:
     name: A Cold Blade Like a Shadow
