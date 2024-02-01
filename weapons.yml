@@ -45,11 +45,11 @@ Amos' Bow:
     effects:
       - target: self
         stat: na dmg%
-        minvalue: 0.8
+        minvalue: 0.08
         maxvalue: 0.16
       - target: self
         stat: ca dmg%
-        minvalue: 0.8
+        minvalue: 0.08
         maxvalue: 0.16
 
 Aqua Simulacra:
