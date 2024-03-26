@@ -155,3 +155,5 @@ Navia:
   stat: cdmg%
 Chevreuse:
   stat: hp%
+Chiori:
+  stat: cr%

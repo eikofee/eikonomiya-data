@@ -176,6 +176,10 @@ Cashflow Supervision:
           minvalue: 0.08
           maxvalue: 0.16
 
+Dialogues of the Desert Sages:
+  - name: Principle of Equilibrium
+    type: none
+
 Elegy for the End:
   - name: The Parting Refrain
     type: static
@@ -913,6 +917,35 @@ Tulaytullah's Remembrance:
         stat: na dmg%
         minvalue: 0.048
         maxvalue: 0.096
+
+Uraku Misugiri:
+  - name: Broad Bloom, Shrine Sword (1)
+    type: static
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
+      - target: self
+        stat: def%
+        minvalue: 0.2
+        maxvalue: 0.4
+  - name: Broad Bloom, Shrine Sword (2)
+    type: bool
+    text: "Nearby character deals Geo DMG (15s)."
+    effects:
+      - target: self
+        stat: na dmg%
+        minvalue: 0.16
+        maxvalue: 0.32
+      - target: self
+        stat: skill dmg%
+        minvalue: 0.24
+        maxvalue: 0.48
 
 Verdict:
   - name: Many Oaths of Dawn and Dusk
