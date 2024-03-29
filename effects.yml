@@ -17,3 +17,83 @@
     - target: team
       stat: hp%
       value: 0.25
+
+- name: Shattering Ice
+  source: cryo resonance
+  type: bool
+  text: Enemy is affected by Cryo/is Frozen.
+  effects:
+    - target: team
+      stat: cr%
+      value: 0.15
+
+- name: Impetuous Winds
+  source: anemo resonance
+  type: static
+  effects:
+    - target: team
+      stat: mov spd%
+      value: 0.1
+
+- name: Enduring Rock - Static
+  source: geo resonance
+  type: static
+  effects:
+    - target: team
+      stat: shield%
+      value: 0.15
+
+- name: Enduring Rock - Shielded
+  source: geo resonance
+  type: bool
+  text: Character is protected by a shield.
+  effects:
+    - target: self
+      stat: dmg%
+      value: 0.15
+
+- name: Enduring Rock - Hit when Shielded
+  source: geo resonance
+  type: bool
+  text: Enemy is hit by shielded character (15s).
+  effects:
+    - target: enemy
+      stat: geo res%
+      value: -0.2
+
+- name: Sprawling Greenery - Static
+  source: dendro resonance
+  type: static
+  effects:
+    - target: team
+      stat: em
+      value: 50
+
+- name: Sprawling Greenery - Single Effect
+  source: dendro resonance
+  type: bool
+  text: Triggered Burning, Quicken or Bloom reaction (6s).
+  effects:
+    - target: team
+      stat: em
+      value: 30
+
+- name: Sprawling Greenery - Double Effect
+  source: dendro resonance
+  type: bool
+  text: Triggered Aggravate, Spread, Hyperbloom or Burgeon reaction (6s).
+  effects:
+    - target: team
+      stat: em
+      value: 20
+
+- name: Protective Canopy
+  source: no resonance
+  type: static
+  effects:
+    - target: team
+      stat: elem res%
+      value: 0.15
+    - target: team
+      stat: phys res%
+      value: 0.15
