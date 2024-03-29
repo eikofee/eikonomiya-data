@@ -1,5 +1,6 @@
 - name: Fervent Flame
   source: pyro resonance
+  keywords: pyro resonance atk
   type: static
   effects:
     - target: team
@@ -8,10 +9,12 @@
 
 - name: High Voltage
   source: electro resonance
+  keywords: electro resonance
   type: none
 
 - name: Soothing Water
   source: hydro resonance
+  keywords: hydro resonance hp
   type: static
   effects:
     - target: team
@@ -20,6 +23,7 @@
 
 - name: Shattering Ice
   source: cryo resonance
+  keywords: cryo resonance crit
   type: bool
   text: Enemy is affected by Cryo/is Frozen.
   effects:
@@ -29,6 +33,7 @@
 
 - name: Impetuous Winds
   source: anemo resonance
+  keywords: anemo resonance move speed
   type: static
   effects:
     - target: team
@@ -37,6 +42,7 @@
 
 - name: Enduring Rock - Static
   source: geo resonance
+  keywords: geo resonance shield
   type: static
   effects:
     - target: team
@@ -45,6 +51,7 @@
 
 - name: Enduring Rock - Shielded
   source: geo resonance
+  keywords: geo resonance shield dmg
   type: bool
   text: Character is protected by a shield.
   effects:
@@ -54,6 +61,7 @@
 
 - name: Enduring Rock - Hit when Shielded
   source: geo resonance
+  keywords: geo resonance shield res
   type: bool
   text: Enemy is hit by shielded character (15s).
   effects:
@@ -63,6 +71,7 @@
 
 - name: Sprawling Greenery - Static
   source: dendro resonance
+  keywords: dendro resonance em
   type: static
   effects:
     - target: team
@@ -71,6 +80,7 @@
 
 - name: Sprawling Greenery - Single Effect
   source: dendro resonance
+  keywords: dendro resonance em burning quicken bloom
   type: bool
   text: Triggered Burning, Quicken or Bloom reaction (6s).
   effects:
@@ -80,6 +90,7 @@
 
 - name: Sprawling Greenery - Double Effect
   source: dendro resonance
+  keywords: dendro resonance em aggravate spread hyperbloom burgeon
   type: bool
   text: Triggered Aggravate, Spread, Hyperbloom or Burgeon reaction (6s).
   effects:
@@ -89,6 +100,7 @@
 
 - name: Protective Canopy
   source: no resonance
+  keywords: resonance res phys
   type: static
   effects:
     - target: team
