@@ -1,0 +1,11 @@
+name: Shattering Ice
+cards:
+- name: Shattering Ice
+  source: cryo resonance
+  keywords: cryo resonance crit
+  type: bool
+  text: Enemy is affected by Cryo/is Frozen.
+  effects:
+    - target: team
+      stat: cr%
+      value: 0.15

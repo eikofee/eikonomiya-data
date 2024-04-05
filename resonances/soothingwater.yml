@@ -1,0 +1,10 @@
+name: Soothing Water
+cards:
+- name: Soothing Water
+  source: hydro resonance
+  keywords: hydro resonance hp
+  type: static
+  effects:
+    - target: team
+      stat: hp%
+      value: 0.25

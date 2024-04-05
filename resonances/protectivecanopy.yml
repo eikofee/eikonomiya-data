@@ -1,0 +1,13 @@
+name: Protective Canopy
+cards:
+- name: Protective Canopy
+  source: no resonance
+  keywords: resonance res phys
+  type: static
+  effects:
+    - target: team
+      stat: elem res%
+      value: 0.15
+    - target: team
+      stat: phys res%
+      value: 0.15

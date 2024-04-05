@@ -1,8 +1,39 @@
-# Eikonomiya-data
-Game info to update [eikonomiya](https://github.com/eikofee/eikonomiya) without rebuilding docker image every time.
-Since this thing is updated "by hand", I use yaml markup.
+YAML is used here.
+Part of the data is taken directly from [Genshin Optimizer](https://github.com/frzyc/genshin-optimizer).
 
-## Structure of data
+### data
+Contains stat modifiers and effects for everything using this format:
+```yml
+name: Name of the item (character, weapon, artifact set, etc...)
+cards: [] Array of effects available for the item
+    - name: Name of the card
+      source: optional label for the effect explorer
+      keywords: optional search keywords for the effect explorer
+      type: Type of the card for interactivity (static, bool, stack, stack-precise, bool-elem)
+        static -> no interaction
+        bool -> on/off interaction
+        stack -> multiply effect value by set interactive number of stacks
+        stack-precise -> interactive number of stacks with determined effects
+        bool-elem -> interactive elemental selection with determined effects
+      tag: optional label (2pc, 4pc, A1, A4, C1, etc...)
+      text: optional description, usually the condition for non-static type cards.
+      maxstack: (stack,stack-precise only) Maximum obtainable stacks
+      effects: [] Array of stat modifiers
+        - target: target of the modifier (self, team, enemy, team-exclusive)
+          stat: target stat, see below
+          value: value of the modifier (25% = 0.25)
+          source: (ratio stats only) source stat to compute ratio from
+          ratio: (ratio stats only) ratio value
+          step: (ratio stats only) change multiplier of ratio instead of 1 (e.g. every 1000 hp)
+          maxvalue: max flat value that can be computed for that effect
+          base: value to substract to source stat before computing ratio
+          r1value: (weapon only) value of the modifier scaling at R1
+          r5value: (weapon only) value of the modifier scaling at R5
+          r1ratio: (weapon only) ratio of the modifier scaling at R1
+          r5ratio: (weapon only) ratio of the modifier scaling at R5
+          r1maxvalue: (weapon only) max value of the modifier scaling at R1
+          r5maxvalue: (weapon only) max value of the modifier scaling at R5
+```
 
 ### Stats Symbols
 Symbol | Description
@@ -29,49 +60,34 @@ Symbol | Description
 `heal out%` | Healing effectiveness%
 `shield%` | Shield resistance%
 
-Elements and Elemental reactions symbols can also be used as prefix.
-
-### Buff Object
-Field name | Available values | Description
----|---|---
-`target` | `self`, `enemy`, `team`| Target of the buff.
-`stat` | Stats Symbol | Stat affected by the buff.
-`value` | Float | Modifier affected to the stat. Can be a flat value or a multiplier in ratio cases. In the case of weapons, can be an array when value changes with refinement levels.
-`maxvalue` | Float | (Optional) Used when value is a ratio. Maximum value allowed for the buff.
-
-### Effect Object
-Field name | Available values | Description
----|---|---
-`type` | `none`,`buff`, `bool buff`, `elem bool buff`, `stack buff`, `precise-stack buff` | Mechanic of the effect, see below.
-`name` | String | (Optional) Name of the effect. Should be defaulted to parent object's name if not given.
-`text` | String | Description of how the effect/passive works.
-`maxstack` | Int | (Optional) Maximum number of stack allowed when `stack buff` or `precise-stack buff` is used in `type`.
-`buff` | Buff Object[] | Buff provided by the effect/passive.
-`elems`| Buff Objects | (Optional) Buff provided depending on the element involved when `elem bool buff` is used in `type`. Use field names `pyro`, `hydro`, `cryo`, `electro`, `geo`, `dendro` to list the buffs. Can **not** be an array.
-`stacks` | Buff Objects | (Optional) Buff provided depending on the number of stacks when `precise-stack buff` is used in `type`. Use integers to list effects. Can **not** be an array.
-
-`buff` is the simplest form of effect, it gives bonus without condition. For other types, use the `text` field to explain how it works.
-`bool buff` asks for certain conditions to be enabled, such as using an elemental skill. It has to be enabled manually by the user.
-`stack buff` is an extension of the boolean version but is multiply the buff by the number of stacks selected, starting at 0.
-`precise-stack buff` is a more complicated version of the boolean version, but instead of multiplying the buff, it applies the buff listed under a specific number of stacks.
-`elem bool buff` works in a similar way but instead of a number of stacks, it works with specific elements.
-If the effect is not important for the computation, use `none`.
-
-### Artefact
-Field name | Available values | Description
----|---|---
-`2pc` | Effect Object[] | The passive given when wearing 2 pieces of the artefact set.
-`4pc` | Effect Object[] | The passive given when wearing 4 pieces of the artefact set.
-
-### Weapon
-
-I'm not sure if we should include base atk and secondary attribute values, as they are changing every level, and can be found out with a few calculations during character loading.
-Maybe give only the secondary attribute name but not the value to compute that value more easily ?
-
-Field name | Available values | Description
----|---|---
-`attribute` | Stat Symbol | The secondary attribute of the weapon. Does **not** include supplementary effect in the weapon passive.
-`passive` | Effect Object[] | Description of the passive. Remember to use arrays in the `value` field of Buff Objects for each refinement level.
+Elements and Elemental reactions symbols can also be used as prefix on certain stat symbols.
+Symbol | Description
+---|---
+`true` | "True" damage (not scaling on anything else)
+`phys` | Physical
+`anemo` | Anemo
+`geo` | Geo
+`electro` | Electro
+`dendro` | Dendro
+`hydro` | Hydro
+`pyro` | Pyro
+`cryo` | Cryo
+`vaporize` | Vaporize
+`overloaded` | Overloaded
+`melt` | Melt
+`burning` | Burning
+`electro-charged` | Electro-Charged
+`frozen` | Frozen
+`shatter` | Shatter
+`bloom` | Bloom
+`burgeon` | Burgeon
+`hyperbloom` | Hyperbloom
+`superconduct` | Superconduct
+`quicken` | Quicken
+`spread` | Spread
+`aggravate` | Aggravate
+`swirl` | Swirl (can be combined with another element as suffix)
+`crystalize` | Crystalize (can be combined with another element as suffix)
 
 ## DMG Formula reminder
 ```

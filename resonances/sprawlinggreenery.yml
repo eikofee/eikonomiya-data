@@ -1,0 +1,28 @@
+name: Sprawling Greenery
+cards:
+- name: Sprawling Greenery - Static
+  source: dendro resonance
+  keywords: dendro resonance em
+  type: static
+  effects:
+    - target: team
+      stat: em
+      value: 50
+- name: Sprawling Greenery - Single Effect
+  source: dendro resonance
+  keywords: dendro resonance em burning quicken bloom
+  type: bool
+  text: Triggered Burning, Quicken or Bloom reaction (6s).
+  effects:
+    - target: team
+      stat: em
+      value: 30
+- name: Sprawling Greenery - Double Effect
+  source: dendro resonance
+  keywords: dendro resonance em aggravate spread hyperbloom burgeon
+  type: bool
+  text: Triggered Aggravate, Spread, Hyperbloom or Burgeon reaction (6s).
+  effects:
+    - target: team
+      stat: em
+      value: 20

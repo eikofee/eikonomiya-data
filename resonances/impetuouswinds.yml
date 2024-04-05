@@ -1,0 +1,10 @@
+name: Impetuous Winds
+cards:
+- name: Impetuous Winds
+  source: anemo resonance
+  keywords: anemo resonance move speed
+  type: static
+  effects:
+    - target: team
+      stat: mov spd%
+      value: 0.1

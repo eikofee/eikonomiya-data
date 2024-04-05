@@ -1,3 +1,245 @@
+Xiangling:
+  - name: Beware, It's Super Hot!
+    tag: A4
+    type: bool
+    text: Picked up the chili pepper (10s).
+    effects:
+      - target: active
+        stat: atk%
+        value: 0.1
+  - name: Crispy Outside, Tender Inside
+    tag: C1
+    type: bool
+    text: Enemy is hit by Guoba's attack (6s).
+    effects:
+      - target: enemy
+        stat: pyro res%
+        value: -0.15
+  - name: Condensed Pyronado
+    tag: C6
+    type: bool
+    text: Pyronado is active.
+    effects:
+      - target: team
+        stat: pyro dmg%
+        value: 0.15
+
+Barbara:
+  - name: Vitality Burst
+    tag: C2
+    type: bool
+    text: Skill is active.
+    effects:
+      - target: active
+        stat: hydro dmg%
+        value: 0.15
+
+Xingqiu:
+  - name: Blades Amidst Raindrops
+    tag: A4
+    type: static
+    effects:
+      - target: self
+        stat: hydro dmg%
+        value: 0.2
+  - name: Rainbow Upon the Azure Sky
+    tag: C2
+    type: bool
+    text: Enemy is hit by sword rain attack (4s).
+    effects:
+      - target: enemy
+        stat: hydro res%
+        value: -0.15
+
+Beidou:
+  - name: Lightning Storm
+    tag: A4
+    type: bool
+    text: Tidecaller was cast with maximum DMG (10s).
+    effects:
+      - target: self
+        stat: na dmg%
+        value: 0.15
+      - target: self
+        stat: ca dmg%
+        value: 0.15
+      - target: self
+        stat: na spd%
+        value: 0.15
+      - target: self
+        stat: ca spd%
+        value: 0.15
+  - name: Bane of Evil
+    tag: C6
+    type: bool
+    text: Stormbreaker is active.
+    effects:
+      - target: enemy
+        stat: electro res%
+        value: -0.15
+
+
+Lisa:
+  - name: Static Electricity Field
+    tag: A4
+    type: bool
+    text: Enemy is hit by Lightning Rose
+    effects:
+      - target: enemy
+        stat: def%
+        value: -0.15
+  - name: Electromagnetic Field
+    tag: C2
+    type: bool
+    text: Lisa is casting Violet Arc (holding skill).
+    effects:
+      - target: self
+        stat: def%
+        value: 0.25
+
+Razor:
+  - name: Hunger
+    tag: A4
+    type: bool
+    text: Energy is below 50%.
+    effects:
+      - target: self
+        stat: er%
+        value: 0.3
+  - name: Wolf's Instinct
+    tag: C1
+    type: bool
+    text: Picked up an Elemental Orb or Particle (8s).
+    effects:
+      - target: self
+        stat: dmg%
+        value: 0.1
+  - name: Suppression
+    tag: C2
+    type: bool
+    text: Enemy is below 30% HP.
+    effects:
+      - target: self
+        stat: cr%
+        value: 0.1
+  - name: Bite
+    tag: C4
+    type: bool
+    text: Enemy is hit by Claw and Thunder (7s).
+    effects:
+      - target: enemy
+        stat: def%
+        value: -0.15
+
+Sucrose:
+  - name: Catalyst Conversion
+    tag: A1
+    type: bool
+    text: Sucrose triggers a Swirl effect (8s).
+    effects:
+      - target: team exclusive
+        stat: em
+        value: 50
+  - name: Mollis Favonius
+    tag: A4
+    type: bool
+    text: Sucrose's skill or burst hits an enemy (8s).
+    effects:
+      - target: team exclusive
+        stat: em
+        source: em
+        base: 0
+        ratio: 0.2
+  - name: Chaotic Entropy
+    tag: C6
+    type: bool-elem
+    text: "Forbidden Creation - Isomer 75 / Type II is fused with another element."
+    effects:
+      elems:
+        hydro:
+          - target: team
+            stat: hydro dmg%
+            value: 0.2
+        pyro:
+          - target: team
+            stat: pyro dmg%
+            value: 0.2
+        cryo:
+          - target: team
+            stat: cryo dmg%
+            value: 0.2
+        electro:
+          - target: team
+            stat: electro dmg%
+            value: 0.2
+
+Chongyun:
+  - name: Steady Breathing
+    tag: A1
+    type: bool
+    text: "Character is in Spirit Blade: Chonghua's Layered Frost's field and wrilds a Sword, Claymore or Polearm."
+    effects:
+      - target: self
+        stat: na spd%
+        value: 0.08
+  - name: Rimechaser Blade
+    tag: A4
+    type: bool
+    text: "Enemy is hit by the second blade created by Spirit Blade: Chonghua's Latered Frost (8s)."
+    effects:
+      - target: enemy
+        stat: cryo res%
+        value: -0.1
+
+Kaeya:
+  - name: Excellent Blood
+    tag: C1
+    type: bool
+    text: Enemy is affected by Cryo.
+    effects:
+      - target: self
+        stat: na cr%
+        value: 0.15
+      - target: self
+        stat: ca cr%
+        value: 0.15
+
+Ningguang:
+  - name: Strategic Reserve
+    tag: A4
+    type: bool
+    text: Character passes through the Jade Screen (10s).
+    effects:
+      - target: self
+        stat: geo dmg%
+        value: 0.12
+  - name: Exquisite be the Jade, Outshining All Beneath
+    tag: C4
+    type: bool
+    text: Jade Screen is active.
+    effects:
+      - target: team
+        stat: elem res%
+        value: 0.1
+
+Noelle:
+  - name: Combat Maid
+    tag: C2
+    type: static
+    effects:
+      - target: self
+        stat: ca dmg%
+        value: 0.15
+  - name: Must Be Spotless
+    tag: C6
+    type: bool
+    text: Sweeping Time is active.
+    effects:
+      - target: self
+        source: def
+        stat: atk
+        ratio: 0.5
+
 Raiden Shogun:
   - name: Enlightened One
     tag: A4

@@ -1,0 +1,10 @@
+name: Fervent Flame
+cards:
+- name: Fervent Flame
+  source: pyro resonance
+  keywords: pyro resonance atk
+  type: static
+  effects:
+    - target: team
+      stat: atk%
+      value: 0.25

@@ -1,0 +1,28 @@
+name: Enduring Rock
+cards:
+- name: Enduring Rock - Static
+  source: geo resonance
+  keywords: geo resonance shield
+  type: static
+  effects:
+    - target: team
+      stat: shield%
+      value: 0.15
+- name: Enduring Rock - Shielded
+  source: geo resonance
+  keywords: geo resonance shield dmg
+  type: bool
+  text: Character is protected by a shield.
+  effects:
+    - target: self
+      stat: dmg%
+      value: 0.15
+- name: Enduring Rock - Hit when Shielded
+  source: geo resonance
+  keywords: geo resonance shield res
+  type: bool
+  text: Enemy is hit by shielded character (15s).
+  effects:
+    - target: enemy
+      stat: geo res%
+      value: -0.2
