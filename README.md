@@ -91,6 +91,6 @@ Symbol | Description
 
 ## DMG Formula reminder
 ```
-(Talent Multiplier * ((Character ATK + Weapon ATK) * (100% + ATK%) + Artefact ATK) + DMG Bonus) * (100% + DMG Bonus%) * Enemy Def (50%) * (100% - Enemy Elemental RES%)
+(Talent Multiplier * ((Character ATK + Weapon ATK) * (100% + ATK%) + Artifact ATK) + DMG Bonus) * (100% + DMG Bonus%) * Enemy Def (50%) * (100% - Enemy Elemental RES%)
 
 ```
