@@ -155,5 +155,9 @@ Navia:
   stat: cdmg%
 Chevreuse:
   stat: hp%
+Xianyun:
+  stat: atk%
+Gaming:
+  stat: atk%
 Chiori:
   stat: cr%
