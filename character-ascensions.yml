@@ -161,3 +161,9 @@ Gaming:
   stat: atk%
 Chiori:
   stat: cr%
+Arlecchino:
+  stat: cdmg%
+Clorinde:
+  stat: cr%
+Sethos:
+  stat: em
