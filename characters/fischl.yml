@@ -1,0 +1,78 @@
+auto:
+  - name : 1-Hit DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : 2-Hit DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : 3-Hit DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : 4-Hit DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : Charged Attack DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : Plunge DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : Low Plunge DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+  - name : High Plunge DMG
+    values:
+      - a: atk
+        v: auto_++
+        flat: false
+skill:
+  - name: Oz's ATK DMG
+    values:
+      - a: atk
+        v: skill_++
+        flat: false
+  - name: Summoning DMG
+    values:
+      - a: atk
+        v: skill_++
+        flat: false
+  - name: Oz's Duration
+    values:
+      - a: time
+        v: skill_++
+        flat: true
+  - name: CD
+    values:
+      - a: time
+        v: skill_++
+        flat: true
+burst:
+  - name: Falling Thunder DMG
+    values:
+      - a: atk
+        v: burst_++
+        flat: false
+  - name: CD
+    values:
+      - a: time
+        v: burst_++
+        flat: true
+  - name: Energy Cost
+    values:
+      - a: none
+        v: burst_++
+        flat: true
